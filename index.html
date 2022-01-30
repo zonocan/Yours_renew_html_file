@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Yours index</title>
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo_cover">
+      <img src="ui_img/logo.png">
+    </div>
+    <div class="header_ui_btns">
+      <a href="#" class="header_ui_btn">
+        <img src="ui_img/contribute_btn.png">
+      </a>
+      <a href="#" class="header_ui_btn">
+        <img src="ui_img/header_purchased_btn.png">
+      </a>
+      <a href="#" class="header_ui_btn">
+        <img src="ui_img/header_like_btn.png">
+      </a>
+      <a href="#" class="header_ui_btn">
+        <img src="ui_img/header_DM_btn.png">
+      </a>
+    </div>
+  </header>
+  <div class="post_contents">
+    <div class="post_cover">
+      <div class="post_inner">
+        <div class="post_img">
+          <a href="">
+            <img src="item_img/denim.JPG">
+          </a>
+        </div>
+        <div class="post_infomation">
+          <div class="poster_profeal">
+            <div class="poster_profeal_img">
+              <img src="item_img/profeal.JPG">
+            </div>
+            <div class="user_name">
+              <p class="at">@</p>
+              <p class="post_user_name">zonocan</p>
+            </div>
+          </div>
+          <div class="post_item_price_name">
+            <div class="item_tags">
+              <p class="tag">#</p>
+              <p class="item_info">Denimu</p>
+            </div>
+            <div class="item_tags">
+              <p class="tag">¥</p>
+              <p class="item_info">20,000</p>
+            </div>
+          </div>
+          <div class="post_explain_cover">
+            <p class="post_explain">
+              <br>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯<br>
+              <br>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯<br>
+            </p>
+          </div>
+          <div class="post_ui_btns">
+            <a class="post_ui_btn" id="like_btn">
+              <img id="like_btn_img">
+            </a>
+            <a href="" class="post_ui_btn">
+              <img src="ui_img/post_purchase_brn.png">
+            </a>
+            <a href="" class="post_ui_btn">
+              <img src="ui_img/post_DM_btn.png">
+            </a>
+            <a href="" class="post_ui_btn">
+              <img src="ui_img/post_reply_btn.png">
+            </a>
+          </div>
+        </div>
+    </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer_inner">
+      <a href="" class="footer_ui_btn">
+        <img src="ui_img/home_btn.png">
+      </a>
+      <a href="" class="footer_ui_btn">
+        <img src="ui_img/search_btn.png">
+      </a>
+      <a href="" class="footer_ui_btn">
+        <img src="ui_img/keep_btn.png">
+      </a>
+      <a href="" class="footer_ui_btn">
+        <img src="ui_img/cart_btn.png">
+      </a>
+      <a href="" class="footer_ui_btn active_profeal_img" id="profeal_btn">
+        <img src="item_img/profeal.JPG">
+      </a>
+    </div>
+  </footer>
+    <script>
+
+    //いいねボタンの実装
+
+      $(function(){
+        //alert('いいねしますか？');
+        const like_imgs = ['post_like.png','function_purchase_btn.png'];
+        let like_btn_index = 0;
+
+      //初期画像の表示
+      $('#like_btn_img').attr('src','ui_img/' + like_imgs[like_btn_index]);
+
+        //いいねボタンの画像の切り替え
+      $('#like_btn').on('click',function(){
+
+        //最後の画像判定
+        if(like_btn_index == like_imgs.length -1){
+          like_btn_index = 0;
+        }else{
+          like_btn_index++;
+        }
+
+        //画像の切り替え
+        $('#like_btn_img').attr('src','ui_img/' + like_imgs[like_btn_index]);
+
+
+      });
+    });
+
+    </script>
+</body>
+</html>

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Yours index</title>
   <link rel="stylesheet" type="text/css" href="base.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
@@ -28,37 +29,26 @@
   </header>
   <div class="post_contents">
     <div class="post_cover">
-      <div class="post_inner">
-        <div class="post_img">
-          <a href="">
-            <img src="item_img/denim.JPG">
+      <section class="post_user_profeal">
+          <a href="" class="post_profeal_img">
+            <img src="profeal_img/profeal.JPG">
           </a>
-        </div>
-        <div class="post_infomation">
-          <div class="poster_profeal">
-            <div class="poster_profeal_img">
-              <img src="item_img/profeal.JPG">
-            </div>
-            <div class="user_name">
-              <p class="at">@</p>
-              <p class="post_user_name">zonocan</p>
-            </div>
+          <div class="post_user_name">
+            <p class="tag">@</p>
+            <p class="user_name">zonocan</p>
           </div>
-          <div class="post_item_price_name">
-            <div class="item_tags">
-              <p class="tag">#</p>
-              <p class="item_info">Denimu</p>
-            </div>
-            <div class="item_tags">
-              <p class="tag">¥</p>
-              <p class="item_info">20,000</p>
-            </div>
-          </div>
-          <div class="post_explain_cover">
-            <p class="post_explain">
-              <br>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯<br>
-              <br>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯<br>
-            </p>
+      </section>
+      <section class="post_item_name">
+        <p class="tag_i">#</p>
+        <p class="item_name">Denimu</p>
+      </section>
+      <div id="post_item_image">
+        <img src="item_img/denim.JPG">
+      </div>
+      <section class="price_functions">
+          <div class="post_item_price">
+            <p class="tag_p">¥</p>
+              <p class="item_price">20,000</p>
           </div>
           <div class="post_ui_btns">
             <a class="post_ui_btn" id="like_btn">
@@ -74,13 +64,15 @@
               <img src="ui_img/post_reply_btn.png">
             </a>
           </div>
-        </div>
-    </div>
+      </section>
+      <div class="post_detail_cover">
+        <p>aaaaaaaaaaaaaaaaaaaa</p>
+      </div>
     </div>
   </div>
   <footer>
     <div class="footer_inner">
-      <a href="" class="footer_ui_btn">
+      <a href="index.html" class="footer_ui_btn">
         <img src="ui_img/home_btn.png">
       </a>
       <a href="" class="footer_ui_btn">
@@ -92,8 +84,8 @@
       <a href="" class="footer_ui_btn">
         <img src="ui_img/cart_btn.png">
       </a>
-      <a href="" class="footer_ui_btn active_profeal_img" id="profeal_btn">
-        <img src="item_img/profeal.JPG">
+      <a href="mypage_index.html" class="footer_ui_btn active_profeal_img" id="profeal_btn">
+        <img src="profeal_img/profeal.JPG">
       </a>
     </div>
   </footer>

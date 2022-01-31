@@ -39,6 +39,7 @@ body {
 
 /* 上の部分は気にせずここから書く */
 
+
 /* ヘッダー部分のコーディング */
 header{
   width: 100%;
@@ -58,7 +59,7 @@ header{
 }
 
 .logo_cover img{
-  width: 30%;
+  width: 100px;
   height: 30px;
   margin-left: 25%;
 }
@@ -77,7 +78,7 @@ header{
 
 .header_ui_btn img{
   height: 30px;
-  width: 40%;
+  width: 30px;
 }
 
 .header_ui_btn img:hover{
@@ -86,139 +87,94 @@ header{
   cursor: pointer;
 }
 
+/* h1 */
+h1{
+  font-weight: bold;
+}
+
+/* ユーザーネーム */
+
+.user_name_info{
+  display: flex;
+  margin: 60px 0 0 10%;
+}
+
+/* フォローボタン */
+
+#follow_btn{
+  height: 30px;
+  width: 120px;
+  background-color: #04e3d0;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5%;
+  margin:20px 0 20px 0;
+}
+
+/* アカウント情報 */
+
+.user_acount_info{
+  width: 76%;
+  display: flex;
+  margin: 50px 0 0 10%;
+  border-bottom: 1px solid black;
+}
+
+.user_profeal img{
+  height: 120px;
+  border-radius: 50%;
+}
+
+.user_profeal h1{
+  text-align: center;
+}
+/* フォローや投稿の状況 */
+
+.post_follower_side{
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 10% 0 10%;
+}
+
+.post_follower_info p{
+  text-align: center;
+}
 /* 共通項目 */
 
-section{
-  width: 100%;
-  height: 50px;
-  border-bottom: 1px solid black;
-  display: flex;
-}
-
-section p{
+h2{
+  font-size: 30px;
   font-weight: bold;
-  font-size: 20px;
 }
 
-/* 投稿 */
+/* 過去の投稿（foreach分で回す）*/
 
-.post_contents{
-  width: 100%;
-  margin: 150px 0 150px 0;
-}
-
-.post_cover{
-  width: 55%;
-  margin: 0 auto;
-  border: 1px solid black;
-  margin-top: 5px;
-}
-
-
-/* 投稿車のプロフィール　*/
-
-.post_user_profeal{
-  display: flex;
-  width: 100%;
-  padding: 5px;
-}
-
-.post_profeal_img{
-  width: 20%;
-  margin-left: 5%;
-}
-
-.post_profeal_img img{
-  height: 40px;
-  border-radius: 50%;
-  margin-left: 5%;
-}
-
-.post_user_name{
+.posted_collection{
   width: 80%;
   display: flex;
-}
-
-.tag{
-  margin: 2px 3% 0 0;
-}
-
-/* 商品名 */
-.post_item_name{
-  padding: 5px;
-}
-.post_item_name p{
-  margin-top: 3px;
-}
-
-.tag_i{
-  margin: 0 3% 0 7%;
-}
-
-/* 投稿写真 */
-
-#post_item_image img{
-  width: 100%;
-  height: 500px;
-}
-
-#post_item_image img:hover{
-  opacity: 0.5;
-}
-
-/* 金額 */
-.post_item_price{
-  width: 20%;
-  display: flex;
-  margin: 0 10% 0 7%;
-  padding: 5px;
-}
-
-.item_price{
-  width: 90%;
-  margin: 5px 0 0 5%;
-}
-
-.tag_p{
-  margin: 5px 0 0 0;
-}
-
-/* 投稿部分のui */
-
-.post_ui_btns{
-  width: 60%;
-  height: 50px;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-.post_ui_btn{
-  width: 20%;
-  align-items: center;
-}
-
-.post_ui_btn img{
-  width: 30%;
-  height: 30px;
   margin: 0 auto;
 }
 
-.post_ui_btn img:hover{
-  opacity: 0.5;
-  border-bottom: 5px solid #90000e;
-  cursor: pointer;
+.posted_item{
+  width: 30%;
+  margin: 100px 5% 100px 0;
 }
 
-/* 投稿内容 */
-
-.post_detail_cover{
+.item_tag_cover{
   width: 100%;
-  height: 300px;
+  height: 50px;
+  display: flex;
   background-color: #f1f1f1;
   padding: 10px;
-  display: none;
 }
+
+.posted_item_img img{
+  width: 100%;
+  height: 350px
+}
+
+
 /* フッター */
 
 footer{
@@ -243,7 +199,7 @@ footer{
 
 .footer_ui_btn img{
   height: 30px;
-  width: 100%;
+  width: 30px;
 }
 
 .footer_ui_btn img:hover{
@@ -260,73 +216,4 @@ footer{
 
 #profeal_btn img{
   border-radius: 50%;
-}
-
-
-/* レスポンシブ対応 */
-
-@media (max-width: 600px) {
-
-  .logo_cover{
-    clip-path: polygon(-2000% 100%, 17.5% 0%, 100% 0%, 70% 100%);
-  }
-
-  .logo_cover img{
-    width: 35%;
-    height: 25px;
-    margin-top: 5px;
-  }
-
-  .header_ui_btn img{
-    width: 60%;
-    height: 20px;
-    margin-top: 3px;
-  }
-
-  /* 共通項目*/
-  section{
-    height: 35px;
-  }
-
-
-  .post_cover{
-    flex-direction: column;
-    width: 60%;
-  }
-
-  .post_profeal_img img{
-    height: 25px;
-  }
-
-  .post_user_name p{
-    font-size: 15px
-  }
-
-  .post_item_name p{
-    font-size: 15px
-  }
-
-  #post_item_image img{
-    height: 300px;
-  }
-
-  .post_item_price{
-    width: 20%;
-    padding: 5px
-  }
-
-  .post_item_price p{
-    font-size: 15px
-  }
-
-  .post_ui_btn img{
-    height: 20px;
-    width: 50%;
-  }
-
-  .footer_ui_btn img{
-    height: 25px;
-  }
-
-
 }

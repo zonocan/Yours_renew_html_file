@@ -90,20 +90,28 @@ header{
 /* h1 */
 h1{
   font-weight: bold;
+  font-size: 30px;
 }
+
 
 /* ユーザーネーム */
 
 .user_name_info{
   display: flex;
+  height: 20px;
   margin: 60px 0 0 10%;
+}
+
+.tag_a{
+  font-size: 25px;
+  margin: 6px 1% 0 0;
 }
 
 /* フォローボタン */
 
 #follow_btn{
   height: 30px;
-  width: 120px;
+  width: 100%;
   background-color: #04e3d0;
   color: white;
   font-weight: bold;
@@ -112,10 +120,15 @@ h1{
   margin:20px 0 20px 0;
 }
 
+#follow_btn.isActive{
+  background-color: #90000e;
+}
+
 /* アカウント情報 */
 
 .user_acount_info{
   width: 76%;
+  height: 250px;
   display: flex;
   margin: 50px 0 0 10%;
   border-bottom: 1px solid black;
@@ -144,8 +157,10 @@ h1{
 /* 共通項目 */
 
 h2{
+  width: 70%;
   font-size: 30px;
   font-weight: bold;
+  margin-bottom: 3px;
 }
 
 /* 過去の投稿（foreach分で回す）*/
@@ -166,12 +181,22 @@ h2{
   height: 50px;
   display: flex;
   background-color: #f1f1f1;
-  padding: 10px;
+  padding: 5px;
+}
+
+.tag{
+  width: 10%;
+  font-size: 20px;
+  margin: 5px 0 0 5%;
 }
 
 .posted_item_img img{
   width: 100%;
-  height: 350px
+  height: 300px
+}
+
+.posted_item_img img:hover{
+  opacity: 0.5;
 }
 
 
@@ -199,7 +224,7 @@ footer{
 
 .footer_ui_btn img{
   height: 30px;
-  width: 30px;
+  width: 100%;
 }
 
 .footer_ui_btn img:hover{
@@ -216,4 +241,80 @@ footer{
 
 #profeal_btn img{
   border-radius: 50%;
+}
+
+
+
+@media (max-width: 600px){
+
+  .logo_cover{
+    clip-path: polygon(-2000% 100%, 17.5% 0%, 100% 0%, 70% 100%);
+  }
+
+  .logo_cover img{
+    width: 35%;
+    height: 25px;
+    margin-top: 5px;
+  }
+
+  .header_ui_btn img{
+    width: 60%;
+    height: 20px;
+    margin-top: 3px;
+  }
+
+  .user_acount_info{
+    height: 150px;
+  }
+
+  .user_profeal img{
+    height: 80px;
+    margin-left: 10%;
+  }
+
+  .posted_item{
+    margin: 50px 5% 100px 0;
+  }
+
+  .user_acount_info{
+    height: 190px;
+  }
+
+  #follow_btn{
+    width: 140%;
+
+  }
+
+  .post_follower_side{
+    width: 80%;
+  }
+
+  .post_follower_info p{
+    font-size: 10px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .item_tag_cover{
+    height: 30px;
+    padding: 1px;
+  }
+
+  .tag{
+    font-size: 15px;
+    margin: 5px 3% 0 3%;
+  }
+
+  h2{
+    font-size: 18px;
+    margin:3px 0 0 0;
+  }
+
+  .posted_item_img img{
+    height: 120px;
+  }
+
+  .footer_ui_btn img{
+    height: 25px;
+  }
+
 }

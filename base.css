@@ -76,8 +76,8 @@ header{
 }
 
 .header_ui_btn img{
-  height: 30px;
-  width: 40%;
+  height: 25px;
+  width: 35%;
 }
 
 .header_ui_btn img:hover{
@@ -124,7 +124,7 @@ section p{
 }
 
 .post_profeal_img{
-  width: 20%;
+  width: 10%;
   margin-left: 5%;
 }
 
@@ -134,32 +134,49 @@ section p{
   margin-left: 5%;
 }
 
+.post_profeal_img img:hover{
+  opacity: 0.5;
+}
+
 .post_user_name{
   width: 80%;
   display: flex;
+  margin-top: 5px;
 }
 
 .tag{
   margin: 2px 3% 0 0;
 }
 
+.humberger_menue img{
+  width: 50%;
+  margin: 10px 5% 0 0;
+}
+
+.humberger_menue img:hover{
+  opacity: 0.5;
+  border-bottom: 5px solid #90000e;
+  cursor: pointer;
+}
+
 /* 商品名 */
 .post_item_name{
   padding: 5px;
 }
+
 .post_item_name p{
   margin-top: 3px;
 }
 
 .tag_i{
-  margin: 0 3% 0 7%;
+  margin: 0 3% 0 15%;
 }
 
 /* 投稿写真 */
 
 #post_item_image img{
   width: 100%;
-  height: 500px;
+  height: 550px;
 }
 
 #post_item_image img:hover{
@@ -190,7 +207,7 @@ section p{
   height: 50px;
   display: flex;
   justify-content: space-around;
-  padding: 10px;
+  padding: 13px;
 }
 
 .post_ui_btn{
@@ -199,8 +216,8 @@ section p{
 }
 
 .post_ui_btn img{
-  width: 30%;
-  height: 30px;
+  width: 40%;
+  height: 25px;
   margin: 0 auto;
 }
 
@@ -219,6 +236,7 @@ section p{
   padding: 10px;
   display: none;
 }
+
 /* フッター */
 
 footer{
@@ -294,8 +312,27 @@ footer{
     width: 60%;
   }
 
+  .post_profeal_img{
+    margin-right: 10%;
+  }
+
   .post_profeal_img img{
     height: 25px;
+  }
+
+  .humberger_menue img{
+    width: 40%;
+    margin: 7px 5% 0 0;
+  }
+
+  .tag_i{
+    margin-left: 25%;
+  }
+
+  .post_user_name {
+    width: 80%;
+    display: flex;
+    margin-top: 2px;
   }
 
   .post_user_name p{
@@ -312,16 +349,20 @@ footer{
 
   .post_item_price{
     width: 20%;
-    padding: 5px
+    padding: 2px
   }
 
   .post_item_price p{
     font-size: 15px
   }
 
+  .post_ui_btns{
+    padding: 8px;
+  }
+
   .post_ui_btn img{
-    height: 20px;
-    width: 50%;
+    height: 18px;
+    width: 55%;
   }
 
   .footer_ui_btn img{

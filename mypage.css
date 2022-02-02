@@ -39,6 +39,7 @@ body {
 
 /* 上の部分は気にせずここから書く */
 
+
 /* ヘッダー部分のコーディング */
 header{
   width: 100%;
@@ -58,7 +59,7 @@ header{
 }
 
 .logo_cover img{
-  width: 30%;
+  width: 100px;
   height: 30px;
   margin-left: 25%;
 }
@@ -76,8 +77,8 @@ header{
 }
 
 .header_ui_btn img{
-  height: 25px;
-  width: 35%;
+  height: 30px;
+  width: 30px;
 }
 
 .header_ui_btn img:hover{
@@ -86,167 +87,131 @@ header{
   cursor: pointer;
 }
 
-/* 共通項目 */
 
-section{
+#edit_btn{
+  height: 30px;
   width: 100%;
-  height: 50px;
-  border-bottom: 1px solid black;
-  display: flex;
-}
-
-section p{
+  background-color: #000;
+  color: white;
   font-weight: bold;
-  font-size: 20px;
+  border: none;
+  border-radius: 5%;
+  margin:20px 0 20px 0;
 }
 
-/* 投稿 */
-
-.post_contents{
-  width: 100%;
-  margin: 150px 0 150px 0;
-}
-
-.post_cover{
-  width: 55%;
-  margin: 0 auto;
-  border: 1px solid black;
-  margin-top: 5px;
-}
-
-
-/* 投稿車のプロフィール　*/
-
-.post_user_profeal{
-  display: flex;
-  width: 100%;
-  padding: 5px;
-}
-
-.post_profeal_img{
-  width: 10%;
-  margin-left: 5%;
-}
-
-.post_profeal_img img{
-  height: 40px;
-  border-radius: 50%;
-  margin-left: 5%;
-}
-
-.post_profeal_img img:hover{
+#edit_btn:hover{
   opacity: 0.5;
 }
 
-.post_user_name{
+/* h1 */
+h1{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+/* ユーザーネーム */
+
+.user_name_info{
+  display: flex;
+  height: 20px;
+  margin: 60px 0 0 10%;
+}
+
+.tag_a{
+  font-size: 25px;
+  margin: 6px 1% 0 0;
+}
+
+
+
+/* アカウント情報 */
+
+.user_acount_info{
+  width: 76%;
+  height: 250px;
+  display: flex;
+  margin: 50px 0 0 10%;
+  border-bottom: 1px solid black;
+}
+
+.user_profeal img{
+  height: 120px;
+  border-radius: 50%;
+}
+
+.user_profeal h1{
+  text-align: center;
+}
+/* フォローや投稿の状況 */
+
+.post_follower_side{
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10% 0 10%;
+}
+
+.post_follower_info p{
+  text-align: center;
+}
+/* 共通項目 */
+
+h2{
+  width: 70%;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.edit_btn img{
+  width: 80%;
+  height: 10px;
+  margin: 18px 0 0 0;
+}
+
+.edit_btn img:hover{
+  opacity: 0.5;
+  margin-bottom: 3px;
+  border-bottom: 2px solid #90000e;
+}
+/* 過去の投稿（foreach分で回す）*/
+
+.posted_collection{
   width: 80%;
   display: flex;
-  margin-top: 5px;
+  margin: 0 auto;
+}
+
+.posted_item{
+  width: 30%;
+  margin: 100px 5% 100px 0;
+}
+
+.item_tag_cover{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  background-color: #f1f1f1;
+  padding: 5px;
 }
 
 .tag{
-  margin: 2px 3% 0 0;
-}
-
-.humberger_menue img{
-  width: 50%;
-  margin: 10px 5% 0 0;
-}
-
-.humberger_menue img:hover{
-  opacity: 0.5;
-  border-bottom: 5px solid #90000e;
-  cursor: pointer;
-}
-
-/* 商品名 */
-.post_item_name{
-  padding: 5px;
-}
-
-.post_item_name p{
-  margin-top: 3px;
-}
-
-.tag_i{
-  margin: 0 3% 0 15%;
-}
-
-/* 投稿写真 */
-
-#post_item_image img{
-  width: 100%;
-  height: 550px;
-}
-
-#post_item_image img:hover{
-  opacity: 0.5;
-}
-
-/* 金額 */
-.post_item_price{
-  width: 20%;
-  display: flex;
-  margin: 0 10% 0 7%;
-  padding: 5px;
-}
-
-.item_price{
-  width: 90%;
+  width: 10%;
+  font-size: 20px;
   margin: 5px 0 0 5%;
 }
 
-.tag_p{
-  margin: 5px 0 0 0;
-}
-
-/* 投稿部分のui */
-
-.post_ui_btns{
-  width: 60%;
-  height: 50px;
-  display: flex;
-  justify-content: space-around;
-  padding: 13px;
-}
-
-.post_ui_btn{
-  width: 20%;
-  align-items: center;
-}
-
-.post_ui_btn img{
-  width: 40%;
-  height: 25px;
-  margin: 0 auto;
-}
-
-.post_ui_btn img:hover{
-  opacity: 0.5;
-  border-bottom: 5px solid #90000e;
-  cursor: pointer;
-}
-
-/* 投稿内容 */
-
-.post_detail_cover{
+.posted_item_img img{
   width: 100%;
-  background-color: #f1f1f1;
-  display: none;
+  height: 300px
 }
 
-.display_btn{
-  width: 30%;
-  height: 20px;
-  font-size: 20px;
-  background-color: #fff;
-  color: #90000e;
-  border: none;
-}
-
-.display_btn:hover{
+.posted_item_img img:hover{
   opacity: 0.5;
 }
+
+
 /* フッター */
 
 footer{
@@ -291,9 +256,8 @@ footer{
 }
 
 
-/* レスポンシブ対応 */
 
-@media (max-width: 600px) {
+@media (max-width: 600px){
 
   .logo_cover{
     clip-path: polygon(-2000% 100%, 17.5% 0%, 100% 0%, 70% 100%);
@@ -311,78 +275,71 @@ footer{
     margin-top: 3px;
   }
 
-  /* 共通項目*/
-  section{
-    height: 35px;
+  .user_acount_info{
+    height: 150px;
   }
 
+  .tag_a{
+    font-size: 18px;
+  }
 
-  .post_cover{
-    flex-direction: column;
+  #edit_btn{
+    width: 140%;
+
+  }
+
+  h1{
+    font-size: 20px
+  }
+  .user_profeal img{
+    height: 65px;
+    margin-left: 10%;
+  }
+
+  .posted_item{
+    margin: 50px 5% 100px 0;
+  }
+
+  .user_acount_info{
+    height: 190px;
+  }
+
+  .edit_btn img{
+    height: 5px;
     width: 60%;
+    margin-top: 8px;
   }
 
-  .post_profeal_img{
-    margin-right: 10%;
-  }
-
-  .post_profeal_img img{
-    height: 25px;
-  }
-
-  .humberger_menue img{
-    width: 40%;
-    margin: 7px 5% 0 0;
-  }
-
-  .display_btn{
-    font-size: 10px;
-    margin-left: 2%;
-  }
-
-  .tag_i{
-    margin-left: 25%;
-  }
-
-  .post_user_name {
+  .post_follower_side{
     width: 80%;
-    display: flex;
-    margin-top: 2px;
   }
 
-  .post_user_name p{
-    font-size: 15px
+  .post_follower_info p{
+    font-size: 10px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .item_tag_cover{
+    height: 20px;
+    padding: 1px;
   }
 
-  .post_item_name p{
-    font-size: 15px
+  .tag{
+    font-size: 8px;
+    margin: 3px 0 0 3%;
   }
 
-  #post_item_image img{
-    height: 300px;
+  h2{
+    font-size: 10px;
+    margin:3px 0 0 0;
   }
 
-  .post_item_price{
-    width: 20%;
-    padding: 2px
-  }
-
-  .post_item_price p{
-    font-size: 15px
-  }
-
-  .post_ui_btns{
-    padding: 8px;
-  }
-
-  .post_ui_btn img{
-    height: 18px;
-    width: 55%;
+  .posted_item_img img{
+    height: 120px;
   }
 
   .footer_ui_btn img{
     height: 25px;
   }
-
 
 }

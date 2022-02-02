@@ -148,7 +148,7 @@ h1{
   width: 30%;
   display: flex;
   justify-content: space-between;
-  margin: 20px 10% 0 10%;
+  margin: 0 10% 0 10%;
 }
 
 .post_follower_info p{
@@ -252,7 +252,7 @@ footer{
   }
 
   .logo_cover img{
-    width: 35%;
+    width: 40%;
     height: 25px;
     margin-top: 5px;
   }
@@ -267,8 +267,15 @@ footer{
     height: 150px;
   }
 
+  .tag_a{
+    font-size: 18px;
+  }
+
+  h1{
+    font-size: 20px
+  }
   .user_profeal img{
-    height: 80px;
+    height: 65px;
     margin-left: 10%;
   }
 
@@ -295,17 +302,17 @@ footer{
     margin-top: 20px;
   }
   .item_tag_cover{
-    height: 30px;
+    height: 20px;
     padding: 1px;
   }
 
   .tag{
-    font-size: 15px;
-    margin: 5px 3% 0 3%;
+    font-size: 8px;
+    margin: 3px 0 0 3%;
   }
 
   h2{
-    font-size: 18px;
+    font-size: 10px;
     margin:3px 0 0 0;
   }
 

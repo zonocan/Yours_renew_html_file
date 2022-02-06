@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>Yours index</title>
@@ -7,6 +8,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
+
 <body>
   <header>
     <div class="logo_cover">
@@ -39,15 +41,18 @@
     </div>
     <div class="post_follower_side">
       <div class="post_follower_info">
-        <p class="post_follower_nav">投稿<p>
+        <p class="post_follower_nav">投稿
+        <p>
         <p class="figire">3</p>
       </div>
       <div class="post_follower_info">
-        <p class="post_follower_nav">フォロワー<p>
+        <p class="post_follower_nav">フォロワー
+        <p>
         <p class="figire">100</p>
       </div>
       <div class="post_follower_info">
-        <p class="post_follower_nav">フォロー中<p>
+        <p class="post_follower_nav">フォロー中
+        <p>
         <p class="figire">100</p>
       </div>
     </div>
@@ -124,20 +129,19 @@
       </a>
     </div>
   </footer>
-    <script>
+  <script>
+    //フォローボタンの実装
 
-      //フォローボタンの実装
+    $(function() {
 
-      $(function(){
+      $('#follow_btn').on('click', function() {
 
-        $('#follow_btn').on('click',function(){
+        $(this).toggleClass('isActive');
+        $(this).html("フォローを解除 ×");
 
-          $(this).toggleClass('isActive');
-          $(this).html("フォローを解除 ×");
-
-        })
       })
-
-    </script>
+    })
+  </script>
 </body>
+
 </html>

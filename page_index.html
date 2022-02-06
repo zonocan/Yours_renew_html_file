@@ -35,7 +35,9 @@
     <div class="user_profeal">
       <img src="profeal_img/profeal.JPG">
       <h1 class="regiser_name">zono</h1>
-      <button id="follow_btn">フォローする + </button>
+      <button id="follow_btn">
+        <span class="follow_btn_inner">フォローする + </span>
+      </button>
     </div>
     <div class="post_follower_side">
       <div class="post_follower_info">
@@ -120,11 +122,18 @@
 
         $('#follow_btn').on('click',function(){
 
-          $(this).toggleClass('isActive');
-          $(this).html("フォローを解除 ×");
+          $(this).toggleClass('isActive',alertFunc);
 
-        })
-      })
+        });
+
+        function alertFunc(){
+          if ($(this).css('background-color') == '#90000e') {
+            $("#follow_btn_inner").text("フォローを解除 ×");
+          }else{
+            $("#follow_btn_inner").text("フォローする + ");
+          }
+        };
+      });
 
     </script>
 </body>

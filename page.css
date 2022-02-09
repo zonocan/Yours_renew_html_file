@@ -289,8 +289,10 @@ footer{
 
   #follow_btn{
     width: 140%;
-
+    font-size: 10px;
   }
+
+
 
   .post_follower_side{
     width: 80%;

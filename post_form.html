@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <title>Yours index</title>
-  <link rel="stylesheet" type="text/css" href="display.css">
+  <link rel="stylesheet" type="text/css" href="post.css">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
+
 <body>
   <header>
     <div class="logo_cover">
@@ -27,19 +29,28 @@
       </a>
     </div>
   </header>
-      <table class="users">
-        <tr class="user">
-          <td class="pfofeal_img">
-            <a href="page_index.html" class="profeal_img_btn">
-              <img src="profeal_img/profeal.JPG">
-            </a>
-          </td>
-          <td class="user_info">
-            <th class="guid">＠<th>
-            <th class="user_name">zonocanさんが購入しました</th>
-          </td>
-        </tr>
-      </table>
+  <div class="post_content">
+    <form method="post" action="post_detail.html">
+      <div class="post_user_name">
+        <p class="guid">@</p>
+        <p class="user">zonocan</p>
+      </div>
+      <label class="item_info">
+        <p>商品名</p>
+        <input type="text" name="item" class="item" placeholder="#">
+      </label>
+      <label class="post_item">
+        <p>投稿画像</p>
+        <img src="ui_img/contribute_btn.png">
+        <input type="file" name="file" id="post_img">
+      </label>
+      <label class="item_info">
+        <p>金額</p>
+        <input type="text" name="price" class="price" placeholder="¥">
+      </label>
+      <input type="submit" value="次の画面へ" name="submit" class="contribute">
+    </form>
+  </div>
   <footer>
     <div class="footer_inner">
       <a href="index.html" class="footer_ui_btn">
@@ -61,4 +72,5 @@
   </footer>
 
 </body>
+
 </html>

@@ -226,6 +226,7 @@ section p{
   font-size: 20px;
   font-weight: bold;
   margin-top: 6px;
+  display: none;
 }
 
 #like_figire{

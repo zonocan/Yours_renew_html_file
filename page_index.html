@@ -16,10 +16,10 @@
       <a href="#" class="header_ui_btn">
         <img src="ui_img/contribute_btn.png">
       </a>
-      <a href="#" class="header_ui_btn">
+      <a href="display.html" class="header_ui_btn">
         <img src="ui_img/header_purchased_btn.png">
       </a>
-      <a href="#" class="header_ui_btn">
+      <a href="display.html" class="header_ui_btn">
         <img src="ui_img/header_like_btn.png">
       </a>
       <a href="#" class="header_ui_btn">
@@ -35,9 +35,7 @@
     <div class="user_profeal">
       <img src="profeal_img/profeal.JPG">
       <h1 class="regiser_name">zono</h1>
-      <button id="follow_btn">
-        <span class="follow_btn_inner">フォローする + </span>
-      </button>
+      <button id="follow_btn">フォローする + </button>
     </div>
     <div class="post_follower_side">
       <div class="post_follower_info">
@@ -122,17 +120,16 @@
 
         $('#follow_btn').on('click',function(){
 
-          $(this).toggleClass('isActive',alertFunc);
+          if($(this).text() === 'フォローをやめる ×'){
+            $(this).text('フォローする +');
+          }else{
+            $(this).text('フォローをやめる ×')
+          }
+
+          $(this).toggleClass('isActive');
 
         });
 
-        function alertFunc(){
-          if ($(this).css('background-color') == '#90000e') {
-            $("#follow_btn_inner").text("フォローを解除 ×");
-          }else{
-            $("#follow_btn_inner").text("フォローする + ");
-          }
-        };
       });
 
     </script>

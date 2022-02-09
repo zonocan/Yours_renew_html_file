@@ -88,19 +88,38 @@ header{
 
 /* 共通項目 */
 .users{
-  width: 30%;
-  margin: 35% 200px 100% 35%;
+  width: 60%;
+  margin: 20% 200px 100% 20%;
   border: 1px solid black;
+  text-align: center;
+}
+
+.user{
+  height: 50px;
+}
+
+.pfofeal_img{
+  width: 20%;
 }
 
 .user img{
-  width: 10%;
+  width: 40%;
+  height: 40px;
   border-radius: 50%;
   margin-left: 20%;
 }
 
-.guid{
+.profeal_img_btn img:hover{
+  opacity: 0.5;
+}
 
+.guid{
+  width: 1%;
+  font-size: 20px;
+}
+
+.user_name{
+  font-size: 30px;
 }
 
 
@@ -140,7 +159,6 @@ footer{
 .active_profeal_img:hover{
   opacity: 0.5;
   border-bottom: 5px solid #90000e;
-
 }
 
 #profeal_btn img{

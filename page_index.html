@@ -95,20 +95,25 @@
   </div>
   <footer>
     <div class="footer_inner">
-      <a href="index.html" class="footer_ui_btn">
+      <a href="#" class="footer_ui_btn" id="footer_ui_home_btn">
         <img src="ui_img/home_btn.png">
+        <div class="footer_ui_home_btn footer_btn_line"></div>
       </a>
-      <a href="" class="footer_ui_btn">
+      <a href="#" class="footer_ui_btn" id="footer_ui_search_btn">
         <img src="ui_img/search_btn.png">
+        <div class="footer_ui_search_btn footer_btn_line"></div>
       </a>
-      <a href="" class="footer_ui_btn">
+      <a href="#" class="footer_ui_btn" id="footer_ui_keep_btn">
         <img src="ui_img/keep_btn.png">
+        <div class="footer_ui_keep_btn footer_btn_line"></div>
       </a>
-      <a href="" class="footer_ui_btn">
+      <a href="#" class="footer_ui_btn" id="footer_ui_cart_btn">
         <img src="ui_img/cart_btn.png">
+        <div class="footer_ui_cart_btn footer_btn_line"></div>
       </a>
-      <a href="mypage_index.html" class="footer_ui_btn active_profeal_img" id="profeal_btn">
+      <a href="mypage_index.html" class="footer_ui_btn" id="profeal_btn">
         <img src="profeal_img/profeal.JPG">
+        <div class="profeal_btn footer_btn_line"></div>
       </a>
     </div>
   </footer>
@@ -130,6 +135,15 @@
 
         });
 
+      });
+
+      //フッターボタンのui
+      $(function(){
+        $('.footer_btn_line').hide();
+        $('.footer_ui_btn').on('click',function(){
+          $('.footer_btn_line').not($('.'+$(this).attr('id'))).hide();
+          $('.'+$(this).attr('id')).show();
+        });
       });
 
     </script>

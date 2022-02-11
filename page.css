@@ -222,26 +222,43 @@ footer{
 }
 
 
+.footer_ui_btn{
+  width: 15%;
+}
+
 .footer_ui_btn img{
   height: 30px;
-  width: 100%;
+  width: 20%;
+  margin: 0 auto;
 }
 
 .footer_ui_btn img:hover{
   opacity: 0.5;
-  border-bottom: 5px solid #90000e;
   cursor: pointer;
 }
 
-.active_profeal_img:hover{
-  opacity: 0.5;
-  border-bottom: 5px solid #90000e;
-
+#profeal_btn{
+  width: 15%;
 }
 
 #profeal_btn img{
   border-radius: 50%;
+  height: 30px;
+  width: 20%;
+  margin: 0 auto;
 }
+
+#profeal_btn img:hover{
+  opacity: 0.5;
+}
+
+.footer_btn_line{
+  height: 5px;
+  width: 20%;
+  margin: 3px 40% 0 40%;
+  background-color: #90000e;
+}
+
 
 
 
@@ -322,8 +339,30 @@ footer{
     height: 120px;
   }
 
+  .footer_ui_btn{
+    width: 20%;
+  }
+
   .footer_ui_btn img{
-    height: 25px;
+    height: 20px;
+  }
+
+  #profeal_btn{
+    width: 23%;
+  }
+
+  #profeal_btn img{
+    border-radius: 50%;
+    height: 20px;
+    width: 20%;
+    margin: 0 auto;
+  }
+
+  .footer_btn_line{
+    height: 5px;
+    width: 20%;
+    margin: 1px 40% 0 40%;
+    background-color: #90000e;
   }
 
 }

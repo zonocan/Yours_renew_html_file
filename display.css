@@ -89,7 +89,7 @@ header{
 /* 共通項目 */
 .users{
   width: 60%;
-  margin: 20% 200px 100% 20%;
+  margin:100px 20% 100% 20%;
   border: 1px solid black;
   text-align: center;
 }
@@ -103,7 +103,7 @@ header{
 }
 
 .user img{
-  width: 40%;
+  width: 35%;
   height: 40px;
   border-radius: 50%;
   margin-left: 20%;

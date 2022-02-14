@@ -6,13 +6,18 @@
   <title>Yours index</title>
   <link rel="stylesheet" type="text/css" href="base.css">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
   <header>
     <div class="logo_cover">
       <img src="ui_img/logo.png">
+    </div>
+    <div class="header_serach_area">
+      <form method="post">
+
+      </form>
     </div>
     <div class="header_ui_btns">
       <a href="#" class="header_ui_btn" id="header_post_btn">
@@ -33,57 +38,101 @@
       </a>
     </div>
   </header>
-  <div class="post_contents">
-    <div class="post_cover">
-      <section class="post_user_profeal">
-        <a href="page_index.html" class="post_profeal_img">
+  <div class="screen">
+    <div class="side_nav_btn">
+      <div class="side_btn_inner"></div>
+    </div>
+    <div class="side_nav_cover">
+      <button class="close_side_nav_btn">×</button>
+      <div class="side_btn">
+        <a href="" class="side_ui_btn" id="side_profeal_btn">
           <img src="profeal_img/profeal.JPG">
         </a>
-        <div class="post_user_name">
-          <p class="tag">@</p>
-          <p class="user_name">zonocan</p>
-        </div>
-        <a href="" id="humberger_menue">
-          <img src="ui_img/humberger.png">
-        </a>
-      </section>
-      <section class="post_item_name">
-        <p class="tag_i">#</p>
-        <p class="item_name">Denimu</p>
-      </section>
-      <div id="post_item_image">
-        <img src="item_img/denim.JPG">
+        <p class="side_guid">マイページ</p>
       </div>
-      <section class="price_functions">
-        <div class="post_item_price">
-          <p class="tag_p">¥</p>
-          <p class="item_price">20,000</p>
+      <div class="side_btn">
+        <a href="" class="side_ui_btn">
+          <img src="ui_img/pc_side_home.png">
+        </a>
+        <p class="side_guid">ホーム</p>
+      </div>
+      <div class="side_btn">
+        <a href="" class="side_ui_btn">
+          <img src="ui_img/pc_side_search.png">
+        </a>
+        <p class="side_guid">検索</p>
+      </div>
+      <div class="side_btn">
+        <a href="" class="side_ui_btn">
+          <img src="ui_img/pc_side_keep.png">
+        </a>
+        <p class="side_guid">いいね済み</p>
+      </div>
+      <div class="side_btn">
+        <a href="" class="side_ui_btn">
+          <img src="ui_img/pc_side_cart.png">
+        </a>
+        <p class="side_guid">購入商品</p>
+      </div>
+    </div>
+    <div class="post_contents">
+      <div class="post_cover">
+        <section class="post_user_profeal">
+          <a href="page_index.html" class="post_profeal_img">
+            <img src="profeal_img/profeal.JPG">
+          </a>
+          <div class="post_user_name">
+            <p class="tag">@</p>
+            <p class="user_name">zonocan</p>
+          </div>
+          <a href="" id="humberger_menue">
+            <img src="ui_img/humberger.png">
+          </a>
+        </section>
+        <section class="post_item_name">
+          <div class="name_block">
+            <p class="tag_i">#</p>
+            <p class="item_name">Denimu</p>
+          </div>
+          <div class="name_block stock">
+            <p class="tag_i">在庫数</p>
+            <p class="">1</1>
+          </div>
+        </section>
+        <div id="post_item_image">
+          <img src="item_img/denim.JPG">
         </div>
-        <div class="post_ui_btns">
-          <a class="post_ui_btn" id="like_btn">
-            <img id="like_btn_img">
-          </a>
-          <ul class="figire" id="like_figire">1</ul>
-          <a class="post_ui_btn" id="purchase_brn">
-            <img id="purchase_btn_img">
-          </a>
-          <ul class="figire" id="purchase_figire">1</ul>
-          <a href="" class="post_ui_btn">
-            <img src="ui_img/post_DM_btn.png">
-          </a>
-          <ul class="figire">1</ul>
-          <a href="" class="post_ui_btn">
-            <img src="ui_img/post_reply_btn.png">
-          </a>
-          <ul class="figire">1</ul>
-        </div>
-      </section>
-      <table class="post_detail_cover">
-        <td>aaaaaaaaaaaaaaaaaaaa</td>
-      </table>
-      <button id="display_btn">
-        <span id="display_btn_inner">...詳しく読む</span>
-      </button>
+        <section class="price_functions">
+          <div class="post_item_price">
+            <p class="tag_p">¥</p>
+            <p class="item_price">20,000</p>
+          </div>
+          <div class="post_ui_btns">
+            <a class="post_ui_btn" id="like_btn">
+              <img id="like_btn_img">
+            </a>
+            <ul class="figire" id="like_figire">1</ul>
+            <a class="post_ui_btn" id="purchase_brn">
+              <img id="purchase_btn_img">
+            </a>
+            <ul class="figire" id="purchase_figire">1</ul>
+            <a href="" class="post_ui_btn">
+              <img src="ui_img/post_DM_btn.png">
+            </a>
+            <ul class="figire">1</ul>
+            <a href="" class="post_ui_btn">
+              <img src="ui_img/post_reply_btn.png">
+            </a>
+            <ul class="figire">1</ul>
+          </div>
+        </section>
+        <table class="post_detail_cover">
+          <td>aaaaaaaaaaaaaaaaaaaa</td>
+        </table>
+        <button id="display_btn">
+          <span id="display_btn_inner">...詳しく読む</span>
+        </button>
+      </div>
     </div>
   </div>
   <footer>
@@ -113,14 +162,35 @@
   <script>
 
     //ヘッダーのui
-    $(function(){
+
+    $(function() {
 
       $('.header_btn_line').hide();
-      $('.header_ui_btn').on('click',function(){
-        $('.header_btn_line').not($('.'+$(this).attr('id'))).hide();
-        $('.'+$(this).attr('id')).show();
+      $('.header_ui_btn').on('click', function() {
+        $('.header_btn_line').not($('.' + $(this).attr('id'))).hide();
+        $('.' + $(this).attr('id')).show();
       });
     });
+
+    //サイドバボタンーの実装 1
+    
+    $('.side_nav_btn').hover(
+      function() {
+        $('.side_nav_cover').css('display', 'block');
+        $('.side_nav_btn').css('background-color', 'white');
+        $('.post_contents').css('margin', '150px 10% 150px 35%');
+      }
+    );
+
+    //サイドバーの実装
+
+    $(function() {
+      $('.close_side_nav_btn').on('click', function() {
+        $('.side_nav_cover').fadeOut();
+        $('.post_contents').css('margin', '150px 10% 150px 20%');
+        $('.side_nav_btn').css('background-color', 'black');
+      })
+    })
 
     //いいねボタンの実装
 
@@ -213,11 +283,11 @@
     });
 
     //フッターボタンのui
-    $(function(){
+    $(function() {
       $('.footer_btn_line').hide();
-      $('.footer_ui_btn').on('click',function(){
-        $('.footer_btn_line').not($('.'+$(this).attr('id'))).hide();
-        $('.'+$(this).attr('id')).show();
+      $('.footer_ui_btn').on('click', function() {
+        $('.footer_btn_line').not($('.' + $(this).attr('id'))).hide();
+        $('.' + $(this).attr('id')).show();
       })
     });
   </script>

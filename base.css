@@ -76,6 +76,29 @@ header{
   justify-content: space-around;
 }
 
+.serach_text{
+  width: 60%;
+  height: 50px;
+}
+
+.textbox{
+  width: 50%;
+  height: 30px;
+  background-color: #f1f1f1;
+  margin: 10px 0 0 5%;
+  border: none;
+}
+
+.header_search_btn{
+  width: 15%;
+  height: 30px;
+  background-color: #04e3d0;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  margin: 10px 0 0 5%;
+}
+
 .header_ui_btn{
   width: 10%;
   margin: 10px 5% 0 0;
@@ -431,6 +454,10 @@ footer{
     width: 40%;
     height: 25px;
     margin-top: 5px;
+  }
+
+  .header_serach_area{
+    display: none;
   }
 
   .header_ui_btns{

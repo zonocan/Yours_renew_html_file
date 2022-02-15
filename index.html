@@ -15,8 +15,9 @@
       <img src="ui_img/logo.png">
     </div>
     <div class="header_serach_area">
-      <form method="post">
-
+      <form method="post" class="serach_box">
+        <input type="text" name="serach" class="textbox">
+        <input type="submit" name="header_search_btn" value="検索" class="header_search_btn">
       </form>
     </div>
     <div class="header_ui_btns">
@@ -173,7 +174,7 @@
     });
 
     //サイドバボタンーの実装 1
-    
+
     $('.side_nav_btn').hover(
       function() {
         $('.side_nav_cover').css('display', 'block');
@@ -283,6 +284,7 @@
     });
 
     //フッターボタンのui
+
     $(function() {
       $('.footer_btn_line').hide();
       $('.footer_ui_btn').on('click', function() {
@@ -290,6 +292,8 @@
         $('.' + $(this).attr('id')).show();
       })
     });
+
+    
   </script>
 </body>
 

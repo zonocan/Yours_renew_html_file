@@ -14,6 +14,7 @@
     <div class="logo_cover">
       <img src="ui_img/logo.png">
     </div>
+    <!-- PC画面の時のみ表示 -->
     <div class="header_serach_area">
       <form method="post" class="serach_box">
         <label>
@@ -22,32 +23,37 @@
         <input type="submit" name="header_search_btn" value="検索" class="header_search_btn">
       </form>
     </div>
+    <!-- ここまで -->
     <div class="header_ui_btns">
       <a href="#" class="header_ui_btn" id="header_post_btn">
         <img src="ui_img/contribute_btn.png">
+        <!-- javascriptの表示する要素-->
         <div class="header_post_btn header_btn_line"></div>
       </a>
       <a href="#" class="header_ui_btn" id="header_purchased_btn">
         <img src="ui_img/header_purchased_btn.png">
+        <!-- javascriptの表示する要素-->
         <div class="header_purchased_btn header_btn_line"></div>
       </a>
       <a href="#" class="header_ui_btn" id="header_like_btn">
         <img src="ui_img/header_like_btn.png">
+        <!-- javascriptの表示する要素-->
         <div class="header_like_btn header_btn_line"></div>
       </a>
       <a href="#" class="header_ui_btn" id="header_DM_btn">
         <img src="ui_img/header_DM_btn.png">
+        <!-- javascriptの表示する要素-->
         <div class="header_DM_btn header_btn_line"></div>
       </a>
     </div>
   </header>
   <div class="screen">
-    <!-- ナビゲーションボタンを開く前のもの -->
+    <!-- ナビゲーションボタンを開く前のもの (PC画面の時のみ表示) -->
     <div class="side_nav_btn">
       <div class="side_btn_inner"></div>
     </div>
     <!-- ここまで -->
-    <!-- ナビゲーションボタンを開いた後のもの-->
+    <!-- ナビゲーションボタンを開いた後のもの (PC画面の時のみ表示) -->
     <div class="side_nav_cover">
       <button class="close_side_nav_btn">×</button>
       <div class="side_btn">
@@ -157,33 +163,39 @@
       </div>
     </div>
   </div>
+  <!-- スマホ画面の時のみ表示(footer) -->
   <footer>
     <div class="footer_inner">
       <a href="#" class="footer_ui_btn" id="footer_ui_home_btn">
         <img src="ui_img/home_btn.png">
+        <!-- javascriptの表示する要素-->
         <div class="footer_ui_home_btn footer_btn_line"></div>
       </a>
       <a href="#" class="footer_ui_btn" id="footer_ui_search_btn">
         <img src="ui_img/search_btn.png">
+        <!-- javascriptの表示する要素-->
         <div class="footer_ui_search_btn footer_btn_line"></div>
       </a>
       <a href="#" class="footer_ui_btn" id="footer_ui_keep_btn">
         <img src="ui_img/keep_btn.png">
+        <!-- javascriptの表示する要素-->
         <div class="footer_ui_keep_btn footer_btn_line"></div>
       </a>
       <a href="#" class="footer_ui_btn" id="footer_ui_cart_btn">
         <img src="ui_img/cart_btn.png">
+        <!-- javascriptの表示する要素-->
         <div class="footer_ui_cart_btn footer_btn_line"></div>
       </a>
       <a href="mypage_index.html" class="footer_ui_btn" id="profeal_btn">
         <img src="profeal_img/profeal.JPG">
+        <!-- javascriptの表示する要素-->
         <div class="profeal_btn footer_btn_line"></div>
       </a>
     </div>
   </footer>
   <script>
     //ヘッダーの検索ボタン
-    
+
     $(function() {
       $('.header_search_btn').on('click', function() {
         $(this).toggleClass('isActive');

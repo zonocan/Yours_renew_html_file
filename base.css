@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* reset */
 body, h1, h2, h3, h4, h5, h6, p, address,
 ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
@@ -13,20 +14,41 @@ ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
   border-collapse: collapse;
 }
 
-textarea { font-size: 100%; vertical-align:middle;}
-img { border-style: none; display: block; }
-hr { display: none; }
-em{font-style: normal}
-input{line-height:auto;vertical-align:middle;}
-strong.more{color:#c30}
-a{text-decoration: none;}
-
-html {
-
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
 }
 
+img {
+  border-style: none;
+  display: block;
+}
+
+hr {
+  display: none;
+}
+
+em {
+  font-style: normal
+}
+
+input {
+  line-height: auto;
+  vertical-align: middle;
+}
+
+strong.more {
+  color: #c30
+}
+
+a {
+  text-decoration: none;
+}
+
+html {}
+
 body {
-  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
 }
 
 * {
@@ -38,9 +60,8 @@ body {
 }
 
 /* 上の部分は気にせずここから書く */
-
 /* ヘッダー部分のコーディング */
-header{
+header {
   width: 100%;
   height: 50px;
   background-color: black;
@@ -49,7 +70,7 @@ header{
   top: 0;
 }
 
-.logo_cover{
+.logo_cover {
   width: 35%;
   height: 40px;
   background-color: white;
@@ -57,31 +78,31 @@ header{
   padding: 5px;
 }
 
-.logo_cover img{
+.logo_cover img {
   width: 30%;
   height: 30px;
   margin-left: 25%;
 }
 
 /* PC画面の時のみ表示*/
-.header_serach_area{
+.header_serach_area {
   width: 40%;
 }
 
 /* ui部分 */
-.header_ui_btns{
+.header_ui_btns {
   width: 15%;
   display: flex;
   justify-content: flex-end;
   justify-content: space-around;
 }
 
-.serach_text{
+.serach_text {
   width: 60%;
   height: 50px;
 }
 
-.textbox{
+.textbox {
   width: 50%;
   height: 30px;
   background-color: #f1f1f1;
@@ -89,7 +110,7 @@ header{
   border: none;
 }
 
-.header_search_btn{
+.header_search_btn {
   width: 15%;
   height: 30px;
   background-color: #04e3d0;
@@ -99,56 +120,56 @@ header{
   margin: 10px 0 0 5%;
 }
 
-.header_search_btn:hover{
+.header_search_btn:hover {
   opacity: 0.5;
 }
 
-.header_search_btn.isActive{
+.header_search_btn.isActive {
   background-color: #90000e;
 }
 
-.header_ui_btn{
+.header_ui_btn {
   width: 10%;
   margin: 10px 5% 0 0;
 }
 
-.header_ui_btn img{
+.header_ui_btn img {
   height: 25px;
   width: 100%;
 }
 
-.header_ui_btn img:hover{
+.header_ui_btn img:hover {
   opacity: 0.5;
   cursor: pointer;
 }
 
-.header_btn_line{
+.header_btn_line {
   height: 5px;
   width: 100%;
   margin-top: 5px;
   background-color: #90000e;
 }
-/* 共通項目 */
 
-section{
+/* 共通項目 */
+section {
   width: 100%;
   height: 50px;
   border-bottom: 1px solid black;
   display: flex;
 }
 
-section p{
+section p {
   font-weight: bold;
   font-size: 20px;
 }
-/* パソコン画面の時のみ表示 */
 
-.screen{
+/* パソコン画面の時のみ表示 */
+.screen {
   width: 100%;
   display: flex;
 }
 
-.side_nav_btn{
+.side_nav_btn {
   width: 5%;
   height: 420px;
   background-color: black;
@@ -158,12 +179,12 @@ section p{
   clip-path: polygon(0% 100%, 0% 0%, 100% 15%, 100% 85%);
 }
 
-.side_btn_inner{
+.side_btn_inner {
   height: 420px;
   width: 100%;
 }
 
-.side_nav_cover{
+.side_nav_cover {
   width: 25%;
   height: 450px;
   background-color: black;
@@ -174,49 +195,49 @@ section p{
   display: none;
 }
 
-.side_btn{
+.side_btn {
   width: 65%;
   height: 50px;
   margin: 25px 0 0 35%;
   display: flex;
 }
 
-.side_ui_btn{
+.side_ui_btn {
   width: 30%;
 }
 
-.side_ui_btn img{
+.side_ui_btn img {
   height: 28px;
   width: 45%;
 }
 
-.side_ui_btn img:hover{
+.side_ui_btn img:hover {
   opacity: 0.5;
 }
 
-#side_profeal_btn img{
+#side_profeal_btn img {
   height: 30px;
   border-radius: 50%;
 }
 
-.side_guid{
+.side_guid {
   color: #fff;
   font-size: 15px;
 }
 
-.side_guid:hover{
+.side_guid:hover {
   opacity: 0.5;
   font-weight: bold;
 }
 
-.side_btns_guid_line{
+.side_btns_guid_line {
   height: 5px;
   width: 100%;
   background-color: #90000e;
   clip-path: polygon(-2000% 100%, 17.5% 0%, 82.5% 0%, 100% 100%);
 }
 
-.close_side_nav_btn{
+.close_side_nav_btn {
   width: 25px;
   height: 25px;
   font-size: 20px;
@@ -226,118 +247,114 @@ section p{
   margin: 3px 0 0 92%;
 }
 
-.close_side_nav_btn:hover{
+.close_side_nav_btn:hover {
   opacity: 0.5;
 }
-/* 投稿 */
 
-.post_contents{
+/* 投稿 */
+.post_contents {
   width: 55%;
   margin: 150px 10% 150px 20%;
 }
 
-.post_cover{
+.post_cover {
   width: 100%;
   margin: 0 auto;
   border: 1px solid black;
 }
 
-
 /* 投稿車のプロフィール　*/
-
-.post_user_profeal{
+.post_user_profeal {
   display: flex;
   width: 100%;
   padding: 5px;
 }
 
-.post_profeal_img{
+.post_profeal_img {
   width: 10%;
   margin-left: 5%;
 }
 
-.post_profeal_img img{
+.post_profeal_img img {
   height: 40px;
   border-radius: 50%;
   margin-left: 5%;
 }
 
-.post_profeal_img img:hover{
+.post_profeal_img img:hover {
   opacity: 0.5;
 }
 
-.post_user_name{
+.post_user_name {
   width: 80%;
   display: flex;
   margin-top: 5px;
 }
 
-.tag{
+.tag {
   margin: 2px 3% 0 0;
 }
 
-#humberger_menue img{
+#humberger_menue img {
   width: 50%;
   margin: 10px 5% 0 0;
 }
 
-#humberger_menue img:hover{
+#humberger_menue img:hover {
   opacity: 0.5;
   cursor: pointer;
 }
 
 /* 商品名 */
-.post_item_name{
+.post_item_name {
   padding: 5px;
   background-color: #f1f1f1;
 }
 
-.name_block{
+.name_block {
   width: 40%;
   display: flex;
   padding: 3px;
   margin-left: 9%;
 }
 
-.tag_i{
+.tag_i {
   margin: 0 6% 0 15%;
 }
 
-.stock_figire{
+.stock_figire {
   width: 25%;
 }
 
 /* 投稿写真 */
-
-#post_item_image img{
+#post_item_image img {
   width: 100%;
   height: 600px;
 }
 
-#post_item_image img:hover{
+#post_item_image img:hover {
   opacity: 0.5;
 }
 
 /* 金額 */
-.post_item_price{
+.post_item_price {
   width: 20%;
   display: flex;
   margin: 0 10% 0 7%;
   padding: 5px;
 }
 
-.item_price{
+.item_price {
   width: 90%;
   margin: 5px 0 0 5%;
 }
 
-.tag_p{
+.tag_p {
   margin: 5px 0 0 0;
 }
 
 /* 投稿部分のui */
-
-.post_ui_btns{
+.post_ui_btns {
   width: 60%;
   height: 50px;
   display: flex;
@@ -345,18 +362,18 @@ section p{
   padding: 13px;
 }
 
-.post_ui_btn{
+.post_ui_btn {
   width: 20%;
   align-items: center;
 }
 
-.post_ui_btn img{
+.post_ui_btn img {
   width: 40%;
   height: 25px;
   margin: 0 auto;
 }
 
-.figire{
+.figire {
   width: 10%;
   font-size: 20px;
   font-weight: bold;
@@ -364,37 +381,36 @@ section p{
   display: none;
 }
 
-#like_figire{
+#like_figire {
   display: none;
 }
 
-#like_figire.active{}
+#like_figire.active {}
 
-#purchase_figire{
+#purchase_figire {
   display: none;
 }
 
-#purchase_figire.active{}
+#purchase_figire.active {}
 
-.post_detail_cover td{
+.post_detail_cover td {
   padding: 30px;
   font-size: 20px;
 }
 
-.post_ui_btn img:hover{
+.post_ui_btn img:hover {
   opacity: 0.5;
   cursor: pointer;
 }
 
 /* 投稿内容 */
-
-.post_detail_cover{
+.post_detail_cover {
   width: 100%;
   background-color: #f1f1f1;
   display: none;
 }
 
-#display_btn{
+#display_btn {
   width: 30%;
   height: 20px;
   font-size: 20px;
@@ -403,17 +419,16 @@ section p{
   border: none;
 }
 
-#display_btn:hover{
+#display_btn:hover {
   opacity: 0.5;
 }
 
-#display_btn_inner{
+#display_btn_inner {
   width: 100%;
 }
 
 /* フッター */
-
-footer{
+footer {
   width: 100%;
   height: 50px;
   background-color: black;
@@ -423,7 +438,7 @@ footer{
   display: none;
 }
 
-.footer_inner{
+.footer_inner {
   width: 100%;
   height: 40px;
   background-color: white;
@@ -434,107 +449,104 @@ footer{
   align-items: center;
 }
 
-.footer_ui_btn{
+.footer_ui_btn {
   width: 15%;
 }
 
-.footer_ui_btn img{
+.footer_ui_btn img {
   height: 30px;
   width: 20%;
   margin: 0 auto;
 }
 
-.footer_ui_btn img:hover{
+.footer_ui_btn img:hover {
   opacity: 0.5;
   cursor: pointer;
 }
 
-#profeal_btn{
+#profeal_btn {
   width: 15%;
 }
 
-#profeal_btn img{
+#profeal_btn img {
   border-radius: 50%;
   height: 30px;
   width: 20%;
   margin: 0 auto;
 }
 
-#profeal_btn img:hover{
+#profeal_btn img:hover {
   opacity: 0.5;
 }
 
-.footer_btn_line{
+.footer_btn_line {
   height: 5px;
   width: 20%;
   margin: 3px 40% 0 40%;
   background-color: #90000e;
 }
 
-
 /* レスポンシブ対応 */
-
 @media (max-width: 600px) {
-
-  .logo_cover{
+  .logo_cover {
     clip-path: polygon(-2000% 100%, 17.5% 0%, 100% 0%, 70% 100%);
   }
 
-  .logo_cover img{
+  .logo_cover img {
     width: 40%;
     height: 25px;
     margin-top: 5px;
   }
 
-  .header_serach_area{
+  .header_serach_area {
     display: none;
   }
 
-  .header_ui_btns{
+  .header_ui_btns {
     width: 60%;
     display: flex;
     justify-content: flex-end;
   }
 
-  .header_ui_btn{
+  .header_ui_btn {
     width: 10%;
     margin: 10px 5% 0 0;
   }
 
-  .header_ui_btn img{
+  .header_ui_btn img {
     width: 60%;
     height: 18px;
     margin-top: 3px;
   }
 
-  .header_btn_line{
+  .header_btn_line {
     width: 60%;
     height: 5px;
   }
 
-  .header_serach_area{
+  .header_serach_area {
     display: none;
   }
 
   /* 共通項目*/
-  section{
+  section {
     height: 35px;
   }
 
-  .side_nav_btn{
+  .side_nav_btn {
     display: none;
   }
 
-  .side_nav_cover{
+  .side_nav_cover {
     display: none;
   }
 
-  .post_contents{
+  .post_contents {
     width: 100%;
     margin: 150px 0 150px 0;
   }
 
-  .post_cover{
+  .post_cover {
     width: 55%;
     margin: 0 auto;
     border: 1px solid black;
@@ -542,11 +554,11 @@ footer{
     width: 60%;
   }
 
-  .post_profeal_img{
+  .post_profeal_img {
     margin-right: 5%;
   }
 
-  .post_profeal_img img{
+  .post_profeal_img img {
     height: 25px;
     margin-right: 80%;
   }
@@ -557,63 +569,63 @@ footer{
     margin: 2px 0 0 0;
   }
 
-  #humberger_menue img{
+  #humberger_menue img {
     width: 40%;
     margin: 6px 5% 0 0;
   }
 
-  #display_btn{
+  #display_btn {
     font-size: 10px;
     margin-left: 2%;
   }
 
-  .tag_i{
+  .tag_i {
     margin-left: 12%;
   }
 
-  .name_block{
+  .name_block {
     width: 56%;
     display: flex;
     padding: 3px;
-    margin:0 3% 0 12%;
+    margin: 0 3% 0 12%;
   }
 
-  .stock{
+  .stock {
     width: 30%;
     margin-left: 3%;
   }
 
-  .post_user_name p{
+  .post_user_name p {
     font-size: 13px
   }
 
-  .post_item_name p{
+  .post_item_name p {
     font-size: 13px
   }
 
-  #post_item_image img{
+  #post_item_image img {
     height: 300px;
   }
 
-  .post_item_price{
+  .post_item_price {
     width: 20%;
     padding: 2px
   }
 
-  .post_item_price p{
+  .post_item_price p {
     font-size: 13px
   }
 
-  .post_ui_btns{
+  .post_ui_btns {
     padding: 8px;
   }
 
-  .post_ui_btn img{
+  .post_ui_btn img {
     height: 15px;
     width: 50%;
   }
 
-  .figire{
+  .figire {
     font-size: 10px;
     margin-top: 8px;
   }
@@ -623,26 +635,26 @@ footer{
     font-size: 15px;
   }
 
-  .footer_ui_btn{
+  .footer_ui_btn {
     width: 20%;
   }
 
-  .footer_ui_btn img{
+  .footer_ui_btn img {
     height: 18px;
   }
 
-  #profeal_btn{
+  #profeal_btn {
     width: 23%;
   }
 
-  #profeal_btn img{
+  #profeal_btn img {
     border-radius: 50%;
     height: 20px;
     width: 20%;
     margin: 0 auto;
   }
 
-  footer{
+  footer {
     width: 100%;
     height: 50px;
     background-color: black;
@@ -652,11 +664,10 @@ footer{
     display: block;
   }
 
-  .footer_btn_line{
+  .footer_btn_line {
     height: 5px;
     width: 20%;
     margin: 1px 40% 0 40%;
     background-color: #90000e;
   }
-
 }

@@ -16,7 +16,9 @@
     </div>
     <div class="header_serach_area">
       <form method="post" class="serach_box">
-        <input type="text" name="serach" class="textbox">
+        <label>
+          <input type="text" name="serach" class="textbox">
+        </label>
         <input type="submit" name="header_search_btn" value="検索" class="header_search_btn">
       </form>
     </div>
@@ -40,42 +42,61 @@
     </div>
   </header>
   <div class="screen">
+    <!-- ナビゲーションボタンを開く前のもの -->
     <div class="side_nav_btn">
       <div class="side_btn_inner"></div>
     </div>
+    <!-- ここまで -->
+    <!-- ナビゲーションボタンを開いた後のもの-->
     <div class="side_nav_cover">
       <button class="close_side_nav_btn">×</button>
       <div class="side_btn">
-        <a href="" class="side_ui_btn" id="side_profeal_btn">
+        <a href="#" class="side_ui_btn" id="side_profeal_btn">
           <img src="profeal_img/profeal.JPG">
         </a>
-        <p class="side_guid">マイページ</p>
+        <a href="#" class="side_guid" id="side_ul_profeal_btn">マイページ
+          <!-- javascriptの表示する要素-->
+          <div class="side_profeal_btn side_ul_profeal_btn side_btns_guid_line"></div>
+        </a>
       </div>
       <div class="side_btn">
-        <a href="" class="side_ui_btn">
+        <a href="#" class="side_ui_btn" id="side_ui_home_btn">
           <img src="ui_img/pc_side_home.png">
         </a>
-        <p class="side_guid">ホーム</p>
+        <a href="#" class="side_guid" id="side_ul_home_btn">ホーム
+          <!-- javascriptの表示する要素-->
+          <div class="side_ui_home_btn side_ul_home_btn side_btns_guid_line"></div>
+        </a>
       </div>
       <div class="side_btn">
-        <a href="" class="side_ui_btn">
+        <a href="#" class="side_ui_btn" id="side_ui_search_btn">
           <img src="ui_img/pc_side_search.png">
         </a>
-        <p class="side_guid">検索</p>
+        <a href="#" class="side_guid" id="side_ul_search_btn">検索
+          <!-- javascriptの表示する要素-->
+          <div class="side_ui_search_btn side_ul_search_btn side_btns_guid_line"></div>
+        </a>
       </div>
       <div class="side_btn">
-        <a href="" class="side_ui_btn">
+        <a href="#" class="side_ui_btn" id="side_ui_keep_btn">
           <img src="ui_img/pc_side_keep.png">
         </a>
-        <p class="side_guid">いいね済み</p>
+        <a href="#" class="side_guid" id="side_ul_keep_btn">いいね済み
+          <!-- javascriptの表示する要素-->
+          <div class="side_ui_keep_btn side_ul_keep_btn side_btns_guid_line"></div>
+        </a>
       </div>
       <div class="side_btn">
-        <a href="" class="side_ui_btn">
+        <a href="#" class="side_ui_btn" id="side_ui_cart_btn">
           <img src="ui_img/pc_side_cart.png">
         </a>
-        <p class="side_guid">購入商品</p>
+        <a href="#" class="side_guid" id="side_ul_cart_btn">購入商品
+          <!-- javascriptの表示する要素-->
+          <div class="side_ui_cart_btn side_ul_cart_btn side_btns_guid_line"></div>
+        </a>
       </div>
     </div>
+    <!-- ここまで -->
     <div class="post_contents">
       <div class="post_cover">
         <section class="post_user_profeal">
@@ -97,7 +118,7 @@
           </div>
           <div class="name_block stock">
             <p class="tag_i">在庫数</p>
-            <p class="">1</1>
+            <p class="stock_figire">1</1>
           </div>
         </section>
         <div id="post_item_image">
@@ -162,6 +183,13 @@
   </footer>
   <script>
 
+    //ヘッダーの検索ボタン
+    $(function()  {
+      $('.header_search_btn').on('click', function(){
+        $(this).toggleClass('isActive');
+      })
+    })
+
     //ヘッダーのui
 
     $(function() {
@@ -170,6 +198,7 @@
       $('.header_ui_btn').on('click', function() {
         $('.header_btn_line').not($('.' + $(this).attr('id'))).hide();
         $('.' + $(this).attr('id')).show();
+
       });
     });
 
@@ -190,6 +219,27 @@
         $('.side_nav_cover').fadeOut();
         $('.post_contents').css('margin', '150px 10% 150px 20%');
         $('.side_nav_btn').css('background-color', 'black');
+      })
+    })
+
+    //サイドバーのUiの実装
+
+    $(function() {
+
+      $('.side_btns_guid_line').hide();
+      $('.side_ui_btn').on('click', function() {
+        $('.side_btns_guid_line').not($('.' + $(this).attr('id'))).hide();
+        $('.' + $(this).attr('id')).show();
+      })
+    })
+
+    //サイドバーのulの実装
+    
+    $(function() {
+      $('.side_btns_guid_line').hide();
+      $('.side_guid').on('click', function() {
+        $('.side_btns_guid_line').not($('.' + $(this).attr('id'))).hide();
+        $('.' + $(this).attr('id')).show();
       })
     })
 
@@ -293,7 +343,7 @@
       })
     });
 
-    
+
   </script>
 </body>
 

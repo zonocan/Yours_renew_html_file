@@ -327,15 +327,58 @@ section p {
 }
 
 /* 投稿写真 */
-#post_item_image img {
+#post_item_images{
+  position: relative;
+}
+
+#post_item_images img {
   width: 100%;
   height: 600px;
 }
 
-#post_item_image img:hover {
+#post_item_images img:hover {
   opacity: 0.5;
 }
 
+.slide_btns{
+  width: 10%;
+  display: flex;
+  position: absolute;
+  top: 260px;
+  right: 0;
+}
+
+
+.slide_btn{
+  height: 20px;
+  width: 20%;
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  background-color: #fff;
+  margin-right: 20%;
+}
+
+.slide_btn.active{
+  background-color: #90000e;
+}
+
+.post_img_sride{
+  height: 14px;
+  align-items: center;
+}
+
+.post_img_sride_guides{
+  width: 30%;
+  display: flex;
+  margin: 0 35% 0 35%;
+}
+
+.post_img_sride_guide{
+  height: 5px;
+  width: 5px;
+  background-color: #656565;
+  border-radius: 50%;
+  margin-right: 20%
+}
 /* 金額 */
 .post_item_price {
   width: 20%;
@@ -605,6 +648,22 @@ footer {
 
   #post_item_image img {
     height: 300px;
+  }
+
+  .slide_btns{
+    width: 10%;
+    display: flex;
+    position: absolute;
+    top: 120px;
+    right: 0;
+  }
+
+  .slide_btn{
+    height: 10px;
+    width: 20%;
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    background-color: #fff;
+    margin-right: 20%;
   }
 
   .post_item_price {

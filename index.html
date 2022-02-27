@@ -4,10 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Yours index</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   <link rel="stylesheet" type="text/css" href="base.css">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -128,21 +132,12 @@
             <p class="stock_figire">1</1>
           </div>
         </section>
-        <div id="post_item_images">
-          <img class="post_item_image">
-          <div class="slide_btns" id="slide_click_btn">
-            <div class="slide_btn"></div>
-            <div class="slide_btn"></div>
-          </div>
-        </div>
-        <section class="post_img_sride_right">
-          <div class="post_img_sride_guides">
-            <div class="post_img_sride_guide active"></div>
-            <div class="post_img_sride_guide"></div>
-            <div class="post_img_sride_guide"></div>
-            <div class="post_img_sride_guide"></div>
-          </div>
-        </section>
+        <ul id="post_item_images" class="slider post_imgs_area">
+          <li class="post_img_list"><a href="#"><img src="item_img/denim.JPG"></a></li>
+          <li class="post_img_list"><a href="#"><img src="item_img/denim2.JPG"></a></li>
+          <li class="post_img_list"><a href="#"><img src="item_img/denim3.JPG"></a></li>
+          <li class="post_img_list"><a href="#"><img src="item_img/denim4.JPG"></a></li>
+        </ul>
         <section class="price_functions">
           <div class="post_item_price">
             <p class="tag_p">¥</p>
@@ -268,44 +263,15 @@
       })
     })
 
-    //色の変更
-
-    $('.slide_btns').hover(
-      function() {
-        $('.slide_btn').toggleClass("active");
-      }
-    )
-
     //投稿画像の切り替えボタンの実装
 
-    $(function() {
-
-      const post_imgs = ['denim.JPG', 'denim2.JPG', 'denim3.JPG', 'denim4.JPG'];
-      let post_index = 0;
-
-      //初期画像の表示
-      $('.post_item_image').attr('src', 'item_img/' + post_imgs[post_index]);
-
-
-
-      //投稿画像の切り替え
-      $('#slide_click_btn').on('click', function() {
-
-        //最後の画像判定
-        if (post_index == post_imgs.length - 1) {
-          post_index = 0;
-        } else {
-          post_index++;
-        }
-
-        //画像の切り替え
-        $('.post_item_image').attr('src', 'item_img/' + post_imgs[post_index]);
-
-        $('.post_img_sride_guide').toggleClas("active");
+    $(document).on('ready', function() {
+      $(".post_imgs_area").slick({
+        dots: true,
       });
-
-
     });
+
+
 
     //いいねボタンの実装
 

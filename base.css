@@ -67,7 +67,7 @@ header {
   background-color: black;
   display: flex;
   position: fixed;
-  position: relative;
+  z-index:500;
   top: 0;
 }
 
@@ -164,11 +164,8 @@ section p {
   font-size: 20px;
 }
 
+
 /* パソコン画面の時のみ表示 */
-.screen {
-  width: 100%;
-  display: flex;
-}
 
 .side_nav_btn {
   width: 5%;
@@ -253,6 +250,11 @@ section p {
 }
 
 /* 投稿 */
+.screen {
+  width: 100%;
+  display: flex;
+}
+
 .post_contents {
   width: 55%;
   margin: 150px 10% 150px 20%;
@@ -328,62 +330,42 @@ section p {
 }
 
 /* 投稿写真 */
-#post_item_images{
-  position: relative;
-}
-
-#post_item_images img {
+.post_imgs_area img {
   width: 100%;
   height: 600px;
 }
 
-#post_item_images img:hover {
+.post_imgs_area img:hover {
   opacity: 0.5;
 }
 
-.slide_btns{
-  width: 10%;
-  display: flex;
-  position: absolute;
-  top: 260px;
-  right: 0;
+/* スライダー */
+.slick-dots{
+  border-bottom: 1px solid black;
+}
+.slick-next:before {
+  content: '▶︎▶︎';
+  color: #fff;
 }
 
-
-.slide_btn{
-  height: 20px;
-  width: 20%;
-  clip-path: polygon(0 0, 0% 100%, 100% 50%);
-  background-color: #fff;
-  margin-right: 20%;
+.slick-next {
+  right: 25px;
 }
 
-.slide_btn.active{
-  background-color: #90000e;
+.slick-prev {
+  left: 3px;
 }
 
-.post_img_sride_right{
-  height: 14px;
-  align-items: center;
+.slick-prev, .slick-next {
+  z-index: 100;
+  font-size: 0;
 }
 
-.post_img_sride_guides{
-  width: 30%;
-  display: flex;
-  margin: 0 35% 0 35%;
+.slick-prev::before {
+  content: '◀︎◀︎';
+  color: #fff;
 }
 
-.post_img_sride_guide{
-  height: 5px;
-  width: 5px;
-  background-color: #656565;
-  border-radius: 50%;
-  margin-right: 20%
-}
-
-.post_img_sride_guide:active{
-  background-color: #90000e;
-}
 /* 金額 */
 .post_item_price {
   width: 20%;
@@ -562,13 +544,13 @@ footer {
   }
 
   .header_ui_btn img {
-    width: 60%;
+    width: 50%;
     height: 18px;
     margin-top: 3px;
   }
 
   .header_btn_line {
-    width: 60%;
+    width: 50%;
     height: 5px;
   }
 
@@ -589,17 +571,22 @@ footer {
     display: none;
   }
 
+  /* 投稿内容 */
+  .screen {
+    width: 100%;
+    display: flex;
+  }
+
   .post_contents {
     width: 100%;
-    margin: 150px 0 150px 0;
+    margin: 80px 0 70px 0;
   }
 
   .post_cover {
-    width: 55%;
+    width: 90%;
     margin: 0 auto;
     border: 1px solid black;
     flex-direction: column;
-    width: 60%;
   }
 
   .post_profeal_img {
@@ -612,7 +599,7 @@ footer {
   }
 
   .post_user_name {
-    width: 95%;
+    width: 65%;
     display: flex;
     margin: 2px 0 0 0;
   }
@@ -624,7 +611,6 @@ footer {
 
   #display_btn {
     font-size: 10px;
-    margin-left: 2%;
   }
 
   .tag_i {
@@ -635,12 +621,12 @@ footer {
     width: 56%;
     display: flex;
     padding: 3px;
-    margin: 0 3% 0 12%;
+    margin: 0 3% 0 14%;
   }
 
   .stock {
     width: 30%;
-    margin-left: 3%;
+    margin-left: 13%;
   }
 
   .post_user_name p {
@@ -651,12 +637,12 @@ footer {
     font-size: 13px
   }
 
-  #post_item_images img {
+  .post_imgs_area img {
     width: 100%;
-    height: 270px;
+    height: 350px;
   }
 
-  .slide_btns{
+  .slide_btns {
     width: 10%;
     display: flex;
     position: absolute;
@@ -664,7 +650,7 @@ footer {
     right: 0;
   }
 
-  .slide_btn{
+  .slide_btn {
     height: 10px;
     width: 20%;
     clip-path: polygon(0 0, 0% 100%, 100% 50%);
@@ -686,8 +672,8 @@ footer {
   }
 
   .post_ui_btn img {
-    height: 15px;
-    width: 50%;
+    height: 18px;
+    width: 35%;
   }
 
   .figire {

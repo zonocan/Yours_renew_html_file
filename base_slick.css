@@ -67,7 +67,6 @@ header {
   background-color: black;
   display: flex;
   position: fixed;
-  position: relative;
   top: 0;
 }
 
@@ -328,10 +327,6 @@ section p {
 }
 
 /* 投稿写真 */
-#post_item_images{
-  position: relative;
-}
-
 #post_item_images img {
   width: 100%;
   height: 600px;
@@ -341,49 +336,30 @@ section p {
   opacity: 0.5;
 }
 
-.slide_btns{
-  width: 10%;
-  display: flex;
-  position: absolute;
-  top: 260px;
-  right: 0;
+/* スライダー */
+.slick-next:before {
+  content: '▶︎▶︎';
+  color: black;
 }
 
-
-.slide_btn{
-  height: 20px;
-  width: 20%;
-  clip-path: polygon(0 0, 0% 100%, 100% 50%);
-  background-color: #fff;
-  margin-right: 20%;
+.slick-next {
+  right: 25px;
 }
 
-.slide_btn.active{
-  background-color: #90000e;
+.slick-prev, .slick-next {
+  z-index: 100;
+  font-size: 0;
 }
 
-.post_img_sride_right{
-  height: 14px;
-  align-items: center;
+.slick-prev {
+  left: 3px;
 }
 
-.post_img_sride_guides{
-  width: 30%;
-  display: flex;
-  margin: 0 35% 0 35%;
+.slick-prev::before {
+  content: '◀︎◀︎';
+  color: black;
 }
 
-.post_img_sride_guide{
-  height: 5px;
-  width: 5px;
-  background-color: #656565;
-  border-radius: 50%;
-  margin-right: 20%
-}
-
-.post_img_sride_guide:active{
-  background-color: #90000e;
-}
 /* 金額 */
 .post_item_price {
   width: 20%;
@@ -656,7 +632,7 @@ footer {
     height: 270px;
   }
 
-  .slide_btns{
+  .slide_btns {
     width: 10%;
     display: flex;
     position: absolute;
@@ -664,7 +640,7 @@ footer {
     right: 0;
   }
 
-  .slide_btn{
+  .slide_btn {
     height: 10px;
     width: 20%;
     clip-path: polygon(0 0, 0% 100%, 100% 50%);

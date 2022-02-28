@@ -41,16 +41,17 @@ body {
 
 
 /* ヘッダー部分のコーディング */
-header{
+header {
   width: 100%;
   height: 50px;
   background-color: black;
   display: flex;
   position: fixed;
+  z-index:500;
   top: 0;
 }
 
-.logo_cover{
+.logo_cover {
   width: 35%;
   height: 40px;
   background-color: white;
@@ -58,34 +59,78 @@ header{
   padding: 5px;
 }
 
-.logo_cover img{
-  width: 100px;
+.logo_cover img {
+  width: 30%;
   height: 30px;
   margin-left: 25%;
 }
 
-/* ui部分 */
-.header_ui_btns{
-  width: 63%;
-  display: flex;
-  justify-content: flex-end;
+/* PC画面の時のみ表示*/
+.header_serach_area {
+  width: 40%;
 }
 
-.header_ui_btn{
+/* ui部分 */
+.header_ui_btns {
+  width: 15%;
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-around;
+}
+
+.serach_text {
+  width: 60%;
+  height: 50px;
+}
+
+.textbox {
+  width: 50%;
+  height: 30px;
+  background-color: #f1f1f1;
+  margin: 10px 0 0 5%;
+  border: none;
+}
+
+.header_search_btn {
+  width: 15%;
+  height: 30px;
+  background-color: #04e3d0;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  margin: 10px 0 0 5%;
+}
+
+.header_search_btn:hover {
+  opacity: 0.5;
+}
+
+.header_search_btn.isActive {
+  background-color: #90000e;
+}
+
+.header_ui_btn {
   width: 10%;
   margin: 10px 5% 0 0;
 }
 
-.header_ui_btn img{
-  height: 30px;
-  width: 30px;
+.header_ui_btn img {
+  height: 25px;
+  width: 100%;
 }
 
-.header_ui_btn img:hover{
+.header_ui_btn img:hover {
   opacity: 0.5;
-  border-bottom: 5px solid #90000e;
   cursor: pointer;
 }
+
+.header_btn_line {
+  height: 5px;
+  width: 100%;
+  margin-top: 5px;
+  background-color: #90000e;
+}
+
 
 /* h1 */
 h1{
@@ -95,7 +140,6 @@ h1{
 
 
 /* ユーザーネーム */
-
 .user_name_info{
   display: flex;
   height: 20px;
@@ -134,9 +178,14 @@ h1{
   border-bottom: 1px solid black;
 }
 
+.user_profeal{
+  width: 25%;
+}
+
 .user_profeal img{
   height: 120px;
   border-radius: 50%;
+  margin-left: 28%;
 }
 
 .user_profeal h1{
@@ -163,17 +212,36 @@ h2{
   margin-bottom: 3px;
 }
 
+/* パソコン画面の時のみ表示 */
+.side_nav_btn {
+  width: 5%;
+  height: 420px;
+  background-color: black;
+  opacity: 0.9;
+  clip-path: polygon(0% 100%, 0% 0%, 100% 15%, 100% 85%);
+}
+
+.side_btn_inner {
+  height: 420px;
+  width: 100%;
+}
+
+
 /* 過去の投稿（foreach分で回す）*/
+.screen {
+  width: 100%;
+  display: flex;
+}
 
 .posted_collection{
   width: 80%;
   display: flex;
-  margin: 0 auto;
+  margin: 0 0 0 5%;
 }
 
 .posted_item{
   width: 30%;
-  margin: 100px 5% 100px 0;
+  margin: 50px 5% 100px 0;
 }
 
 .item_tag_cover{
@@ -201,17 +269,18 @@ h2{
 
 
 /* フッター */
-
-footer{
+/* フッター */
+footer {
   width: 100%;
   height: 50px;
   background-color: black;
   padding: 5px 0 5px 0;
   position: fixed;
   bottom: 0;
+  display: none;
 }
 
-.footer_inner{
+.footer_inner {
   width: 100%;
   height: 40px;
   background-color: white;
@@ -219,40 +288,40 @@ footer{
   justify-content: space-around;
   clip-path: polygon(0% 100%, 5.5% 0%, 94.5% 0%, 100% 100%);
   padding: 5px;
+  align-items: center;
 }
 
-
-.footer_ui_btn{
+.footer_ui_btn {
   width: 15%;
 }
 
-.footer_ui_btn img{
+.footer_ui_btn img {
   height: 30px;
   width: 20%;
   margin: 0 auto;
 }
 
-.footer_ui_btn img:hover{
+.footer_ui_btn img:hover {
   opacity: 0.5;
   cursor: pointer;
 }
 
-#profeal_btn{
+#profeal_btn {
   width: 15%;
 }
 
-#profeal_btn img{
+#profeal_btn img {
   border-radius: 50%;
   height: 30px;
   width: 20%;
   margin: 0 auto;
 }
 
-#profeal_btn img:hover{
+#profeal_btn img:hover {
   opacity: 0.5;
 }
 
-.footer_btn_line{
+.footer_btn_line {
   height: 5px;
   width: 20%;
   margin: 3px 40% 0 40%;
@@ -260,28 +329,55 @@ footer{
 }
 
 
-
-
 @media (max-width: 600px){
-
-  .logo_cover{
+  .logo_cover {
     clip-path: polygon(-2000% 100%, 17.5% 0%, 100% 0%, 70% 100%);
   }
 
-  .logo_cover img{
+  .logo_cover img {
     width: 40%;
     height: 25px;
     margin-top: 5px;
   }
 
-  .header_ui_btn img{
+  .header_serach_area {
+    display: none;
+  }
+
+  .header_ui_btns {
     width: 60%;
-    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header_ui_btn {
+    width: 10%;
+    margin: 10px 5% 0 0;
+  }
+
+  .header_ui_btn img {
+    width: 50%;
+    height: 18px;
     margin-top: 3px;
+  }
+
+  .header_btn_line {
+    width: 50%;
+    height: 5px;
+  }
+
+  .header_serach_area {
+    display: none;
+  }
+
+  .side_nav_btn{
+    display: none;
   }
 
   .user_acount_info{
     height: 150px;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .tag_a{
@@ -291,13 +387,31 @@ footer{
   h1{
     font-size: 20px
   }
+
+  .user_name_info{
+    margin-bottom: 20px;
+  }
+
+  .user_profeal{
+    width: 45%;
+    margin-left: 5%;
+  }
+
   .user_profeal img{
     height: 65px;
-    margin-left: 10%;
+    margin-left: 21%;
+  }
+
+  .posted_collection{
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
   }
 
   .posted_item{
-    margin: 50px 5% 100px 0;
+    width: 100%;
+    margin: 50px 0% 100px 0;
+    border: solid 0.5px black;
   }
 
   .user_acount_info{
@@ -305,10 +419,9 @@ footer{
   }
 
   #follow_btn{
-    width: 140%;
+    width: 95%;
     font-size: 10px;
   }
-
 
 
   .post_follower_side{
@@ -339,26 +452,36 @@ footer{
     height: 120px;
   }
 
-  .footer_ui_btn{
+  .footer_ui_btn {
     width: 20%;
   }
 
-  .footer_ui_btn img{
-    height: 20px;
+  .footer_ui_btn img {
+    height: 18px;
   }
 
-  #profeal_btn{
+  #profeal_btn {
     width: 23%;
   }
 
-  #profeal_btn img{
+  #profeal_btn img {
     border-radius: 50%;
     height: 20px;
     width: 20%;
     margin: 0 auto;
   }
 
-  .footer_btn_line{
+  footer {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    padding: 5px 0 5px 0;
+    position: fixed;
+    bottom: 0;
+    display: block;
+  }
+
+  .footer_btn_line {
     height: 5px;
     width: 20%;
     margin: 1px 40% 0 40%;

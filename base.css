@@ -67,7 +67,7 @@ header {
   background-color: black;
   display: flex;
   position: fixed;
-  z-index:500;
+  z-index:1000;
   top: 0;
 }
 
@@ -262,7 +262,7 @@ section p {
 
 .post_cover {
   width: 100%;
-  margin: 0 auto;
+  margin-bottom: 100px;
   border: 1px solid black;
 }
 
@@ -457,6 +457,7 @@ section p {
   width: 100%;
 }
 
+
 /* フッター */
 footer {
   width: 100%;
@@ -584,7 +585,7 @@ footer {
 
   .post_cover {
     width: 90%;
-    margin: 0 auto;
+    margin: 0 5% 30px 5%;
     border: 1px solid black;
     flex-direction: column;
   }

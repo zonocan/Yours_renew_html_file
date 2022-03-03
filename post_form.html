@@ -4,9 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Yours index</title>
+  <!-- 写真のスライドのcss -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   <link rel="stylesheet" type="text/css" href="post.css">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- 写真のスライドのjs -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -14,23 +20,41 @@
     <div class="logo_cover">
       <img src="ui_img/logo.png">
     </div>
+    <!-- PC画面の時のみ表示 -->
+    <div class="header_serach_area">
+      <form method="post" class="serach_box">
+        <label>
+          <input type="text" name="serach" class="textbox">
+        </label>
+        <input type="submit" name="header_search_btn" value="検索" class="header_search_btn">
+      </form>
+    </div>
+    <!-- ここまで -->
     <div class="header_ui_btns">
-      <a href="" class="header_ui_btn">
+      <a href="#" class="header_ui_btn" id="header_post_btn">
         <img src="ui_img/contribute_btn.png">
+        <!-- javascriptの表示する要素-->
+        <div class="header_post_btn header_btn_line"></div>
       </a>
-      <a href="display.html" class="header_ui_btn">
+      <a href="#" class="header_ui_btn" id="header_purchased_btn">
         <img src="ui_img/header_purchased_btn.png">
+        <!-- javascriptの表示する要素-->
+        <div class="header_purchased_btn header_btn_line"></div>
       </a>
-      <a href="display.html" class="header_ui_btn">
+      <a href="#" class="header_ui_btn" id="header_like_btn">
         <img src="ui_img/header_like_btn.png">
+        <!-- javascriptの表示する要素-->
+        <div class="header_like_btn header_btn_line"></div>
       </a>
-      <a href="#" class="header_ui_btn">
+      <a href="#" class="header_ui_btn" id="header_DM_btn">
         <img src="ui_img/header_DM_btn.png">
+        <!-- javascriptの表示する要素-->
+        <div class="header_DM_btn header_btn_line"></div>
       </a>
     </div>
   </header>
   <div class="post_content">
-    <form method="post" action="post_detail.html">
+    <form method="post" action="post_detail.html" class="post_fashion">
       <div class="post_user_name">
         <p class="guid">@</p>
         <p class="user">zonocan</p>
@@ -42,8 +66,45 @@
       <label class="post_item">
         <p>投稿画像</p>
         <img src="ui_img/contribute_btn.png">
-        <input type="file" name="file" id="post_img">
+        <input type="file"  id="post_img" name="post_img" accept="image/*" multiple="multiple">
       </label>
+      <div id="preview" style="display:none" class="slider post_imgs_area">
+        <img src="">
+      </div>
+
+      <script>
+        $(function() {
+          $('#post_img').change(function(){
+            if( !this.files.length ) {
+              return;
+            }
+            $('#preview').text('');
+            var $files = $(this).prop('files');
+            var post_length = $files.length;
+            for( var i = 0; i < post_length; i++ ) {
+              var file = $files[i];
+              var fr = new FileReader();
+
+              fr.onload = function(e) {
+                var src = e.target.result;
+                var img = '<img src="'+ src +'">';
+                $('#preview').append(img);
+              }
+              fr.readAsDataURL(file);
+            }
+
+            $('#preview').css('display', 'block');
+            $('.post_item').css('display', 'none');
+          });
+        });
+
+        $(document).on('ready', function() {
+          $(".post_imgs_area").slick({
+            dots: true,
+          });
+        });
+      </script>
+
       <label class="item_info">
         <p>金額</p>
         <input type="text" name="price" class="price" placeholder="¥">
@@ -70,7 +131,28 @@
       </a>
     </div>
   </footer>
+  <script>
+    //ヘッダーの検索ボタン
 
+    $(function() {
+      $('.header_search_btn').on('click', function() {
+        $(this).toggleClass('isActive');
+      });
+    });
+
+
+    //ヘッダーのui
+
+    $(function() {
+
+      $('.header_btn_line').hide();
+      $('.header_ui_btn').on('click', function() {
+        $('.header_btn_line').not($('.' + $(this).attr('id'))).hide();
+        $('.' + $(this).attr('id')).show();
+
+      });
+    });
+  </script>
 </body>
 
 </html>

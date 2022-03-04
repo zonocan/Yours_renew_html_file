@@ -55,9 +55,14 @@
   </header>
   <div class="post_content">
     <form method="post" action="post_detail.html" class="post_fashion">
-      <div class="post_user_name">
-        <p class="guid">@</p>
-        <p class="user">zonocan</p>
+      <div class="profeal">
+        <a href="page_index.html" class="post_profeal_img">
+          <img src="profeal_img/profeal.JPG">
+        </a>
+        <div class="post_user_name">
+          <p class="guid">@</p>
+          <p class="user">zonocan</p>
+        </div>
       </div>
       <label class="item_info">
         <p>商品名</p>
@@ -66,45 +71,13 @@
       <label class="post_item">
         <p>投稿画像</p>
         <img src="ui_img/contribute_btn.png">
-        <input type="file"  id="post_img" name="post_img" accept="image/*" multiple="multiple">
+        <input type="file" id="post_img" name="post_img" accept="image/*" multiple="multiple">
       </label>
-      <div id="preview" style="display:none" class="slider post_imgs_area">
-        <img src="">
-      </div>
-
-      <script>
-        $(function() {
-          $('#post_img').change(function(){
-            if( !this.files.length ) {
-              return;
-            }
-            $('#preview').text('');
-            var $files = $(this).prop('files');
-            var post_length = $files.length;
-            for( var i = 0; i < post_length; i++ ) {
-              var file = $files[i];
-              var fr = new FileReader();
-
-              fr.onload = function(e) {
-                var src = e.target.result;
-                var img = '<img src="'+ src +'">';
-                $('#preview').append(img);
-              }
-              fr.readAsDataURL(file);
-            }
-
-            $('#preview').css('display', 'block');
-            $('.post_item').css('display', 'none');
-          });
-        });
-
-        $(document).on('ready', function() {
-          $(".post_imgs_area").slick({
-            dots: true,
-          });
-        });
-      </script>
-
+      <ul id="preview" style="display:none" class="slider post_imgs_area">
+        <li class="post_img_list">
+          <img src="">
+        </li>
+      </ul>
       <label class="item_info">
         <p>金額</p>
         <input type="text" name="price" class="price" placeholder="¥">
@@ -112,22 +85,33 @@
       <input type="submit" value="次の画面へ" name="submit" class="contribute">
     </form>
   </div>
+  <!-- スマホ画面の時のみ表示(footer) -->
   <footer>
     <div class="footer_inner">
-      <a href="index.html" class="footer_ui_btn">
+      <a href="#" class="footer_ui_btn" id="footer_ui_home_btn">
         <img src="ui_img/home_btn.png">
+        <!-- javascriptの表示する要素-->
+        <div class="footer_ui_home_btn footer_btn_line"></div>
       </a>
-      <a href="" class="footer_ui_btn">
+      <a href="#" class="footer_ui_btn" id="footer_ui_search_btn">
         <img src="ui_img/search_btn.png">
+        <!-- javascriptの表示する要素-->
+        <div class="footer_ui_search_btn footer_btn_line"></div>
       </a>
-      <a href="" class="footer_ui_btn">
+      <a href="#" class="footer_ui_btn" id="footer_ui_keep_btn">
         <img src="ui_img/keep_btn.png">
+        <!-- javascriptの表示する要素-->
+        <div class="footer_ui_keep_btn footer_btn_line"></div>
       </a>
-      <a href="" class="footer_ui_btn">
+      <a href="#" class="footer_ui_btn" id="footer_ui_cart_btn">
         <img src="ui_img/cart_btn.png">
+        <!-- javascriptの表示する要素-->
+        <div class="footer_ui_cart_btn footer_btn_line"></div>
       </a>
-      <a href="mypage_index.html" class="footer_ui_btn active_profeal_img" id="profeal_btn">
+      <a href="mypage_index.html" class="footer_ui_btn" id="profeal_btn">
         <img src="profeal_img/profeal.JPG">
+        <!-- javascriptの表示する要素-->
+        <div class="profeal_btn footer_btn_line"></div>
       </a>
     </div>
   </footer>
@@ -151,6 +135,49 @@
         $('.' + $(this).attr('id')).show();
 
       });
+    });
+
+    //投稿画像の表示
+    $(function() {
+      $('#post_img').change(function() {
+        if (!this.files.length) {
+          return;
+        }
+        $('#preview').text('');
+        var $files = $(this).prop('files');
+        var post_length = $files.length;
+        for (var i = 0; i < post_length; i++) {
+          var file = $files[i];
+          var fr = new FileReader();
+
+          fr.onload = function(e) {
+            var src = e.target.result;
+            var img = '<img src="' + src + '">';
+            $('#preview').append(img);
+          }
+          fr.readAsDataURL(file);
+        }
+
+        $('#preview').css('display', 'block');
+        $('.post_item').css('display', 'none');
+      });
+    });
+
+    $(document).on('ready', function() {
+      $(".post_imgs_area").slick({
+        dots: true,
+      });
+    });
+
+
+    //フッターボタンのui
+
+    $(function() {
+      $('.footer_btn_line').hide();
+      $('.footer_ui_btn').on('click', function() {
+        $('.footer_btn_line').not($('.' + $(this).attr('id'))).hide();
+        $('.' + $(this).attr('id')).show();
+      })
     });
   </script>
 </body>

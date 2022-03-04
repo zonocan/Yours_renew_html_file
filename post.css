@@ -140,14 +140,28 @@ header {
 }
 
 /**/
-
-.post_user_name{
+.profeal{
   display: flex;
   margin:0 0 30px 15%;
 }
 
+.post_profeal_img img {
+  height: 40px;
+  border-radius: 50%;
+}
+
+.post_user_name{
+  display: flex;
+  margin-left: 5%;
+}
+
 .post_user_name p{
   font-weight: bold;
+  font-size: 25px;
+}
+
+.guid{
+  margin: 2px 5% 0 0;
 }
 
 .item_info{
@@ -190,7 +204,7 @@ header {
 
 .post_item img{
   width: 10%;
-  margin: 120px 45% 120px 45%;
+  margin: 110px 45% 110px 45%;
 }
 
 input[type="file"] {
@@ -221,8 +235,7 @@ input[type="file"] {
 }
 
 /* フッター */
-
-footer{
+footer {
   width: 100%;
   height: 50px;
   background-color: black;
@@ -231,7 +244,7 @@ footer{
   bottom: 0;
 }
 
-.footer_inner{
+.footer_inner {
   width: 100%;
   height: 40px;
   background-color: white;
@@ -239,29 +252,45 @@ footer{
   justify-content: space-around;
   clip-path: polygon(0% 100%, 5.5% 0%, 94.5% 0%, 100% 100%);
   padding: 5px;
+  align-items: center;
 }
 
+.footer_ui_btn {
+  width: 15%;
+}
 
-.footer_ui_btn img{
+.footer_ui_btn img {
   height: 30px;
-  width: 100%;
+  width: 20%;
+  margin: 0 auto;
 }
 
-.footer_ui_btn img:hover{
+.footer_ui_btn img:hover {
   opacity: 0.5;
-  border-bottom: 5px solid #90000e;
   cursor: pointer;
 }
 
-.active_profeal_img:hover{
-  opacity: 0.5;
-  border-bottom: 5px solid #90000e;
+#profeal_btn {
+  width: 15%;
 }
 
-#profeal_btn img{
+#profeal_btn img {
   border-radius: 50%;
+  height: 30px;
+  width: 20%;
+  margin: 0 auto;
 }
 
+#profeal_btn img:hover {
+  opacity: 0.5;
+}
+
+.footer_btn_line {
+  height: 5px;
+  width: 20%;
+  margin: 3px 40% 0 40%;
+  background-color: #90000e;
+}
 
 /* レスポンシブ対応 */
 
@@ -318,22 +347,28 @@ footer{
     width: 60%;
   }
 
-  .post_user_name{
+  .profeal{
     display: flex;
     margin:0 0 30px 15%;
   }
 
-  .post_profeal_img{
-    margin-right: 10%;
+  .post_profeal_img img {
+    height: 30px;
+    border-radius: 50%;
   }
 
-  .post_profeal_img img{
-    height: 25px;
+  .post_user_name{
+    display: flex;
+    margin-left: 9%;
   }
 
-  .humberger_menue img{
-    width: 40%;
-    margin: 7px 5% 0 0;
+  .post_user_name p{
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .guid{
+    margin: 2px 2% 0 0;
   }
 
   .display_btn{
@@ -376,6 +411,11 @@ footer{
     padding: 8px;
   }
 
+  .post_item img{
+    width: 10%;
+    margin: 120px 45% 120px 45%;
+  }
+
   .post_ui_btn img{
     height: 18px;
     width: 55%;
@@ -386,4 +426,19 @@ footer{
   }
 
 
+  footer {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    padding: 5px 0 5px 0;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .footer_btn_line {
+    height: 5px;
+    width: 20%;
+    margin: 1px 40% 0 40%;
+    background-color: #90000e;
+  }
 }

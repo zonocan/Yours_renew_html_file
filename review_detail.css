@@ -55,6 +55,7 @@ html {}
   box-sizing: border-box;
 }
 
+
 /* ヘッダー部分のコーディング */
 header {
   width: 100%;
@@ -255,8 +256,7 @@ section {
   margin: 0px 10% 0 20%;
 }
 
-
-.post_files {
+.post_contents{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -288,39 +288,18 @@ section {
   margin: 2px 5% 0 0;
 }
 
-.post_item {
+.item_info{
+  width: 80%;
+  display: flex;
+  margin:0 5% 30px 15%;
+}
+
+.info_tag{
+  width: 30%;
+}
+
+.detail_info_text{
   width: 70%;
-  height: 300px;
-  background-color: black;
-  margin: 0 10% 30px 15%;
-  cursor: pointer;
-}
-
-.post_item:hover {
-  opacity: 0.5;
-}
-
-.post_item p {
-  color: white;
-  font-weight: bold;
-  margin: 5px 0 0 10%;
-}
-
-.post_item img {
-  width: 10%;
-  margin: 110px 45% 110px 45%;
-}
-
-input[type="file"] {
-  display: none;
-}
-
-/**/
-#preview img {
-  width: 40%;
-  height: 300px;
-  margin: 0 30% 30px 30%;
-  cursor: pointer;
 }
 
 .contribute {
@@ -394,65 +373,6 @@ footer {
   }
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 600px) {
-  .main_contents {
-    width: 90%;
-    margin: 0 5% 30px 5%;
-    flex-direction: column;
-  }
-
-  .post_profeal_img img {
-    height: 30px;
-    border-radius: 50%;
-  }
-
-  .post_user_name {
-    display: flex;
-    margin-left: 9%;
-  }
-
-  .post_user_name p {
-    font-weight: bold;
-    font-size: 25px;
-  }
-
-  .guid {
-    margin: 2px 2% 0 0;
-  }
-
-  .post_user_name p {
-    font-size: 15px
-  }
-
-  .post_item_name p {
-    font-size: 15px
-  }
-
-  .post_item {
-    width: 70%;
-    height: 300px;
-    background-color: black;
-    /* margin: 0 10% 30px 15%; */
-    cursor: pointer;
-  }
-
-  #preview img {
-    width: 70%;
-    height: 300px;
-    margin: 0 10% 30px 15%;
-    cursor: pointer;
-  }
-
-  .back p {
-      width: 40%;
-      margin: -60px 20% 50px 38%;
-      color: #04e3d0;
-  }
-
-}
-
-/* サイドバーのレスポンシブ */
 @media (max-width: 600px) {
   .side_nav_btn {
     display: none;

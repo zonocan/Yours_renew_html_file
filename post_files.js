@@ -15,10 +15,6 @@ $(function() {
         var src = e.target.result;
         var img = '<li><img src="' + src + '"></li>';
         $('#preview').append(img);
-        $('#preview').removeClass("slick-initialized");
-        $("#preview").slick({
-          dots: true,
-        });
       }
       fr.readAsDataURL(file);
     }

@@ -7,24 +7,17 @@
   <!-- 写真のスライドのcss -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-  <link rel="stylesheet" type="text/css" href="base.css">
-  <!-- fontawesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
-  <!-- 購入ボタンのアラートのcss -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css">
-  <!-- レスポンシブデザイン -->
+  <link rel="stylesheet" type="text/css" href="review_post.css">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- 写真のスライドのjs -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <!-- 読み込むjsファイル -->
   <script type="text/javascript" src="side_ver.js"></script>
-  <script type="text/javascript" src="review_img.js"></script>
-  <script type="text/javascript" src="like.js"></script>
-  <script type="text/javascript" src="display_text.js"></script>
+  <script type="text/javascript" src="post_files.js"></script>
   <script type="text/javascript" src="footer.js"></script>
+
 </head>
 
 <body>
@@ -46,7 +39,7 @@
       </a>
       <!-- jsの表示 -->
       <div id="header_index_categories">
-        
+
       </div>
       <a href="#" class="header_ui_btn">
         <img src="ui_img/header_purchased_btn.png">
@@ -64,7 +57,6 @@
   </header>
   <div class="container">
     <div class="side_nav_btn"></div>
-    <!-- ナビゲーションボタンを開いた後のもの (PC画面の時のみ表示) -->
     <div class="side_nav_cover">
       <button class="close_side_nav_btn">×</button>
       <div class="side_btn">
@@ -114,81 +106,28 @@
       </div>
     </div>
     <!-- ここまで -->
-      <div class="main_contents">
-        <div class="review_contents">
-          <article class="review_content">
-            <section class="user_profeal">
-              <a href="page_index.html" class="review_user_profeal_img">
-                <img src="profeal_img/profeal.JPG">
-              </a>
-              <p class="tag">@</p>
-              <p class="review_user_name">zonocan</p>
-            </section>
-            <section class="review_item_info">
-              <div class="item_info">
-                <p class="tag">#</p>
-                <p class="item_name">denimu</p>
-              </div>
-              <div class="item_stock">
-                <p class="stock_tag">在庫数</p>
-                <p class="stock_figire">1</p>
-              </div>
-            </section>
-            <ul id="review_item_images" class="slider review_imgs_area">
-              <li class="review_img_list">
-                <a href="#">
-                  <img src="item_img/denim.JPG">
-                </a>
-              </li>
-              <li class="review_img_list">
-                <a href="#">
-                  <img src="item_img/denim2.JPG">
-                </a>
-              </li>
-              <li class="review_img_list">
-                <a href="#">
-                  <img src="item_img/denim3.JPG">
-                </a>
-              </li>
-              <li class="review_img_list">
-                <a href="#">
-                  <img src="item_img/denim4.JPG">
-                </a>
-              </li>
-            </ul>
-            <section class="ui_area">
-              <div class="ui_btns">
-                <span class="review_ui_btn">
-                  <i class="fas fa-heart fa-2x like_toggle"></i>
-                </span>
-                <span class="like_counter">1</span>
-                <span class="review_ui_btn">
-                  <img src="ui_img/cart_btn.png">
-                </span>
-                <span class="review_ui_btn">
-                  <i class="fas fa-comment-dots fa-2x"></i>
-                </span>
-                <span class="review_ui_btn">
-                  <img src="ui_img/post_DM_btn.png">
-                </span>
-              </div>
-              <div class="item_category">
-                <p class="gender">UNISEX</p>
-                <span class="category_ui">
-                  <img src="ui_img/category_tops.png">
-                </span>
-              </div>
-            </section>
-            <table class="review_text">
-              <td>aaaaaaaaaaaaaaaaaaaa</td>
-            </table>
-            <button class="display_btn">
-              <span class="display_btn_inner">...詳しく読む</span>
-            </button>
-          </article>
+    <div class="main_contents">
+      <form method="post" action="post_detail.html" class="post_files">
+        <div class="profeal">
+          <a href="page_index.html" class="post_profeal_img">
+            <img src="profeal_img/profeal.JPG">
+          </a>
+          <div class="post_user_name">
+            <p class="guid">@</p>
+            <p class="user">zonocan</p>
+          </div>
         </div>
-      </div>
+        <label class="post_item">
+          <p>投稿画像</p>
+          <img src="ui_img/contribute_btn.png">
+          <input type="file" id="post_img" name="post_img" accept="image/*" multiple="multiple">
+        </label>
+        <ul id="preview" style="display:none" class="slider post_imgs_area"></ul>
+        <input type="submit" value="次の画面へ" name="submit" class="contribute">
+      </form>
     </div>
+  </div>
+  <!-- スマホ画面の時のみ表示(footer) -->
   <footer>
     <div class="footer_inner">
       <a href="#" class="footer_ui_btn" id="footer_ui_home_btn">

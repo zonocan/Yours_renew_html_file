@@ -73,11 +73,7 @@
         <img src="ui_img/contribute_btn.png">
         <input type="file" id="post_img" name="post_img" accept="image/*" multiple="multiple">
       </label>
-      <ul id="preview" style="display:none" class="slider post_imgs_area">
-        <li class="post_img_list">
-          <img src="">
-        </li>
-      </ul>
+      <ul id="preview" style="display:none" class="slider post_imgs_area"></ul>
       <label class="item_info">
         <p>金額</p>
         <input type="text" name="price" class="price" placeholder="¥">
@@ -152,20 +148,18 @@
 
           fr.onload = function(e) {
             var src = e.target.result;
-            var img = '<img src="' + src + '">';
+            var img = '<li><img src="' + src + '"></li>';
             $('#preview').append(img);
+            $('#preview').removeClass("slick-initialized");
+            $("#preview").slick({
+              dots: true,
+            });
           }
           fr.readAsDataURL(file);
         }
 
         $('#preview').css('display', 'block');
         $('.post_item').css('display', 'none');
-      });
-    });
-
-    $(document).on('ready', function() {
-      $(".post_imgs_area").slick({
-        dots: true,
       });
     });
 

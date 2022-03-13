@@ -125,7 +125,6 @@ header {
 }
 
 /* ここまで */
-
 /* ヘッダーのuiボタン */
 .header_ui_btn {
   width: 10%;
@@ -150,7 +149,6 @@ header {
 }
 
 /* jsでの表示 */
-
 /* containaer larabelでブレイドを作る為
     サイドバーとフッターが共通 */
 .container {
@@ -251,215 +249,95 @@ section {
   opacity: 0.5;
 }
 
-/* メインコンテンツの中身を変える */
+/**/
 .main_contents {
   width: 55%;
   margin: 0px 10% 0 20%;
 }
 
-.review_content {
+/* 共通項目 */
+.post_files {
   width: 100%;
-  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
   margin: 100px 0 100px 0;
 }
 
-.user_profeal {
-  padding: 5px;
-  border-bottom: solid 1px black;
+/**/
+.profeal {
+  display: flex;
+  margin: 0 0 30px 15%;
 }
 
-.review_user_profeal_img img {
+.post_profeal_img img {
   height: 40px;
   border-radius: 50%;
-  margin: 0 5% 0 5%;
 }
 
-.tag {
-  font-size: 25px;
+.post_user_name {
+  display: flex;
+  margin-left: 5%;
+}
+
+.post_user_name p {
   font-weight: bold;
-  margin: 1px 2% 0 3%;
+  font-size: 25px;
 }
 
-.review_user_name {
+.guid {
+  margin: 2px 5% 0 0;
+}
+
+.post_item {
   width: 70%;
-  font-size: 25px;
-  font-weight: bold;
+  height: 300px;
+  background-color: black;
+  margin: 0 10% 30px 15%;
+  cursor: pointer;
 }
 
-/* 商品名 */
-.review_item_info {
-  display: flex;
-}
-
-.item_info {
-  width: 55%;
-  display: flex;
-  margin: 4px 0 0 7.5%;
-}
-
-.item_name {
-  font-size: 25px;
-  font-weight: bold;
-  margin-left: 3%;
-}
-
-.item_stock {
-  width: 30%;
-  display: flex;
-}
-
-.item_stock p {
-  font-size: 25px;
-  font-weight: bold;
-  margin: 4px 5% 0 0;
-}
-
-/* 投稿写真 */
-.review_imgs_area img {
-  width: 100%;
-  height: 600px;
-}
-
-.review_img_list img:hover {
+.post_item:hover {
   opacity: 0.5;
 }
 
-/* スライダー */
-.slick-dots {
-  border-bottom: 1px solid black;
-}
-
-.slick-next:before {
-  content: '▶︎▶︎';
-  color: #fff;
-}
-
-.slick-next {
-  right: 25px;
-}
-
-.slick-prev {
-  left: 3px;
-}
-
-.slick-prev, .slick-next {
-  z-index: 100;
-  font-size: 0;
-}
-
-.slick-prev::before {
-  content: '◀︎◀︎';
-  color: #fff;
-}
-
-/* 投稿のui */
-.ui_area {
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-}
-
-.ui_btns {
-  width: 100%;
-  display: flex;
-}
-
-.review_ui_btn {
-  height: 25px;
-  margin: 7px 1% 0 3%;
-}
-
-.review_ui_btn {
-  width: 5%;
-}
-
-.review_ui_btn img {
-  height: 26px;
-}
-
-.review_ui_btn img:hover{
-  opacity: 0.5;
-}
-
-.fa-heart {
-  color: black;
-}
-
-.fa-heart:hover{
-  opacity: 0.5;
-}
-
-.like_toggle{
-  color: black;
-}
-
-.liked.liked{
-  color: #90000e;
-}
-
-
-.like_counter {
+.post_item p {
+  color: white;
   font-weight: bold;
-  font-size: 10px;
-  font-size: 20px;
-  margin: 15px 1% 0 0;
+  margin: 5px 0 0 10%;
 }
 
-.fa-comment-dots {
-  color: black;
+.post_item img {
+  width: 10%;
+  margin: 110px 45% 110px 45%;
 }
 
-.fa-comment-dots:hover{
-  opacity: 0.5;
-}
-
-.item_category {
-  display: flex;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.gender {
-  width: 16%;
-  font-weight: bold;
-  font-size: 20px;
-  margin: 0px 5% 0 3%;
-}
-
-.category_ui img {
-  height: 26px;
-}
-
-/* 投稿内容 */
-.review_text {
-  width: 100%;
-  background-color: #f1f1f1;
+input[type="file"] {
   display: none;
 }
 
-.review_text td{
-  padding: 30px;
-  font-size: 20px;
+/**/
+#preview img {
+  width: 40%;
+  height: 300px;
+  margin: 0 30% 30px 30%;
+  cursor: pointer;
 }
 
-.display_btn {
-  width: 30%;
-  height: 20px;
-  font-size: 20px;
-  background-color: #fff;
-  color: #90000e;
+.contribute {
+  width: 25%;
+  height: 30px;
+  background-color: #90000e;
+  color: white;
+  margin: 0 auto;
   border: none;
+  border-radius: 50px 50px 50px 50px;
 }
 
-.display_btn:hover {
+.contribute:hover {
   opacity: 0.5;
 }
 
-.display_btn_inner {
-  width: 100%;
-}
-
-footer{
+footer {
   display: none;
 }
 
@@ -506,6 +384,58 @@ footer{
   }
 }
 
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  .main_contents {
+    width: 90%;
+    margin: 0 5% 30px 5%;
+    flex-direction: column;
+  }
+
+  .post_profeal_img img {
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .post_user_name {
+    display: flex;
+    margin-left: 9%;
+  }
+
+  .post_user_name p {
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .guid {
+    margin: 2px 2% 0 0;
+  }
+
+  .post_user_name p {
+    font-size: 15px
+  }
+
+  .post_item_name p {
+    font-size: 15px
+  }
+
+  .post_item {
+    width: 70%;
+    height: 300px;
+    background-color: black;
+    /* margin: 0 10% 30px 15%; */
+    cursor: pointer;
+  }
+
+  #preview img {
+    width: 70%;
+    height: 300px;
+    margin: 0 10% 30px 15%;
+    cursor: pointer;
+  }
+  
+}
+
 /* サイドバーのレスポンシブ */
 @media (max-width: 600px) {
   .side_nav_btn {
@@ -514,118 +444,6 @@ footer{
 
   .side_nav_cover {
     display: none;
-  }
-}
-
-/* 投稿部分 */
-@media (max-width: 600px) {
-  .main_contents {
-    width: 90%;
-    margin: 0 5% 30px 5%;
-    flex-direction: column;
-  }
-
-  .review_imgs_area img {
-    width: 100%;
-    height: 350px;
-  }
-
-  .item_info {
-    width: 55%;
-    display: flex;
-    margin: 4px 0 0 12.5%;
-  }
-
-  .review_user_name {
-    width: 70%;
-    font-size: 23px;
-    font-weight: bold;
-  }
-
-  .tag {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 5px 2% 0 3%;
-  }
-
-  .item_name {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 3px 3%;
-  }
-
-  .item_stock p {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 5% 0 0;
-  }
-
-  /* スライダー */
-  .slick-dots {
-    border-bottom: 1px solid black;
-  }
-
-  .slick-next:before {
-    content: '▶︎▶︎';
-    color: #fff;
-  }
-
-  .slick-next {
-    right: 25px;
-  }
-
-  .slick-prev {
-    left: 3px;
-  }
-
-  .slick-prev, .slick-next {
-    z-index: 100;
-    font-size: 0;
-  }
-
-  .slick-prev::before {
-    content: '◀︎◀︎';
-    color: #fff;
-  }
-
-  /* 投稿部分のui */
-  .review_ui_btn img {
-    height: 20px;
-    margin: 8px 5% 0 5%;
-  }
-
-  .fa-heart:before {
-    content: "\f004";
-    font-size: 23px;
-  }
-
-  .like_counter {
-    font-weight: bold;
-    font-size: 10px;
-    font-size: 20px;
-    margin: 15px 1% 0 2%;
-  }
-
-  .fa-comment-dots:before {
-    content: "\f4ad";
-    font-size: 23px;
-  }
-
-  .item_category {
-    display: flex;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .gender {
-    width: 28.5%;
-    font-weight: bold;
-    font-size: 17px;
-    margin: 0px -4.5% 0 3%;
-  }
-
-  .category_ui img {
-    height: 20px;
   }
 }
 
